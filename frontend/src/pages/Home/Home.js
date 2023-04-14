@@ -5,7 +5,18 @@ import applyOnlineIcon from '../../assets/Homepage/applyOnlineIcon.png';
 import discoverMoreIcon from '../../assets/Homepage/discoverMoreIcon.png';
 import card1 from '../../assets/Homepage/oneStopStudySol-Icon.png';
 import card2 from '../../assets/Homepage/oneToOne-Icon.png';
-import card3 from '../../assets/Homepage/endToEnd-Icon.png';
+import card3 from '../../assets/Homepage/endToendIcon.png';
+import aboutImage from '../../assets/Homepage/aboutImage.png';
+import usa from '../../assets/Homepage/usa.png';
+import canada from '../../assets/Homepage/canada.png';
+import germany from '../../assets/Homepage/germany.png';
+import japan from '../../assets/Homepage/japan.png';
+import england from '../../assets/Homepage/england.png';
+import section61 from '../../assets/Homepage/section6-1.png';
+import section62 from '../../assets/Homepage/section6-2.png';
+import section63 from '../../assets/Homepage/section6-3.png';
+import section64 from '../../assets/Homepage/section6-4.png';
+import section65 from '../../assets/Homepage/section6-5.png';
 import './home.css';
 export default function Home() {
   return (
@@ -16,7 +27,10 @@ export default function Home() {
         </div>
         <div className="content">
           <h4>SPECIAL OFFER FIRST CUSTOMER</h4>
-          <h1>Your success journey start with us!</h1>
+          <h1>
+            Your <span className="underline success">success</span> journey
+            start with us!
+          </h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text.
@@ -37,7 +51,9 @@ export default function Home() {
 
       <section className="section section2">
         <h4>About Us</h4>
-        <h1>Lorem ispum is simple dummy text</h1>
+        <h1>
+          Lorem ispum is simple <span className="underline">dummy</span> text
+        </h1>
         <div className="about-cards">
           <div className="card">
             <img src={card1} alt="card1"></img>
@@ -46,7 +62,9 @@ export default function Home() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has.
             </p>
-            <p>Learn More </p>
+            <p className="learnMore">
+              Learn More <i class="bx bx-right-arrow-circle"></i>{' '}
+            </p>
           </div>
           <div className="card">
             <img src={card2} alt="card2"></img>
@@ -55,7 +73,9 @@ export default function Home() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has.
             </p>
-            <p>Learn More </p>
+            <p className="learnMore">
+              Learn More <i class="bx bx-right-arrow-circle"></i>{' '}
+            </p>
           </div>
           <div className="card">
             <img src={card3} alt="card3"></img>
@@ -64,7 +84,223 @@ export default function Home() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has.
             </p>
-            <p>Learn More </p>
+            <p className="learnMore">
+              Learn More <i class="bx bx-right-arrow-circle"></i>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="section section3">
+        <div>
+          <h3>About Us</h3>
+          <h1>
+            Moving beyond product innovation to gain a competitive{' '}
+            <span className="underline">advantage</span>
+          </h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages.
+          </p>
+          <button>Apply Online</button>
+        </div>
+        <div>
+          <img src={aboutImage} alt=""></img>
+        </div>
+      </section>
+
+      <section className="section section4">
+        <h3>Country</h3>
+        <h1>
+          Top <span className="underline success">Destinations</span>For Study
+          With Us
+        </h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's
+        </p>
+        <div className="flag-cards">
+          <div className="flag-card">
+            <img src={usa} alt="flag"></img>
+            <h2>USA</h2>
+          </div>
+          <div className="flag-card">
+            <img src={germany} alt="flag"></img>
+            <h2>Germany</h2>
+          </div>
+          <div className="flag-card">
+            <img src={japan} alt="flag"></img>
+            <h2>Japan</h2>
+          </div>
+          <div className="flag-card">
+            <img src={canada} alt="flag"></img>
+            <h2>Canada</h2>
+          </div>
+          <div className="flag-card">
+            <img src={england} alt="flag"></img>
+            <h2>England</h2>
+          </div>
+        </div>
+        <button className="applyOnlineBtn">Apply Online</button>
+      </section>
+
+      <section className="section section5">
+        <h3>Service</h3>
+        <div className="firstDiv">
+          <h1>Our Service</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's
+          </p>
+        </div>
+        <div className="service-cards">
+          <div className="service-card">
+            <h2>Counseling A</h2>
+            <p className="subText">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's .
+            </p>
+            <div className="points">
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+            </div>
+            <div className="pricing">
+              <h2>$100</h2>
+              <button>Apply Now!</button>
+            </div>
+          </div>
+
+          <div className="service-card">
+            <h2>Counseling B</h2>
+            <p className="subText">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's .
+            </p>
+            <div className="points">
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+            </div>
+            <div className="pricing">
+              <h2>$200</h2>
+              <button>Apply Now!</button>
+            </div>
+          </div>
+
+          <div className="service-card">
+            <h2>Counseling C</h2>
+            <p className="subText">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's .
+            </p>
+            <div className="points">
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+              <p>
+                <span>
+                  <i class="bx bx-right-arrow-circle"></i>
+                </span>{' '}
+                Lorem Ipsum is simply
+              </p>
+            </div>
+            <div className="pricing">
+              <h2>$300</h2>
+              <button>Apply Now!</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section6">
+        <h3>Step</h3>
+        <h1>Steps to Get your Destination</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's
+        </p>
+        <div className="step-cards">
+          <div className="step-card">
+            <img src={section61} alt="img"></img>
+            <h2>Select Consultation Package</h2>
+          </div>
+          <div className="step-card">
+            <img src={section62} alt="img"></img>
+            <h2>Fill in the form completely</h2>
+          </div>
+          <div className="step-card">
+            <img src={section63} alt="img"></img>
+            <h2>Make Payment</h2>
+          </div>
+          <div className="step-card">
+            <img src={section64} alt="img"></img>
+            <h2>Start Consulting With Experts</h2>
+          </div>
+          <div className="step-card">
+            <img src={section65} alt="img"></img>
+            <h2>We Will Register You To Your University</h2>
           </div>
         </div>
       </section>
