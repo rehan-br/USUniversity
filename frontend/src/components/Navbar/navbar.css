@@ -36,7 +36,7 @@
   color: #312259;
 }
 
-Button {
+Nav Button {
   font-size: 14px;
   margin-left: 20px;
   height: 51px;
@@ -63,6 +63,6 @@ Button:hover {
   cursor: pointer;
 }
 
-p {
+Nav p {
   margin-left: 20px;
 }
