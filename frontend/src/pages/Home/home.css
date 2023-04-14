@@ -1,0 +1,59 @@
+.section {
+  max-width: 100%;
+  margin-top: 198px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #312259;
+}
+
+.content h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sec1-btns button {
+  width: 200px;
+  height: 54px;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0px 4px 50px rgba(49, 34, 89, 0.15);
+  border-radius: 20px;
+  position: relative;
+}
+
+.apply-online-btn {
+  background-color: #312259;
+  color: white;
+}
+
+.apply-online-btn img {
+  position: absolute;
+  top: 10px;
+  left: 141px;
+}
+
+.discover-more-btn img {
+  position: absolute;
+  top: 10px;
+  left: 19.5px;
+}
