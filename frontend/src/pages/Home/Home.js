@@ -5,7 +5,7 @@ import applyOnlineIcon from '../../assets/Homepage/applyOnlineIcon.png';
 import discoverMoreIcon from '../../assets/Homepage/discoverMoreIcon.png';
 import card1 from '../../assets/Homepage/oneStopStudySol-Icon.png';
 import card2 from '../../assets/Homepage/oneToOne-Icon.png';
-import card3 from '../../assets/Homepage/endToEnd-Icon.png';
+import card3 from '../../assets/Homepage/endToendIcon.png';
 import './home.css';
 export default function Home() {
   return (
