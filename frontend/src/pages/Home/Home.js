@@ -54,8 +54,9 @@ export default function Home() {
         <h1>
           Lorem ispum is simple <span className="underline">dummy</span> text
         </h1>
+
         <div className="about-cards">
-          <div className="card">
+          <div className="about-card">
             <img src={card1} alt="card1"></img>
             <h3>One Stop Study Solution</h3>
             <p>
@@ -66,7 +67,7 @@ export default function Home() {
               Learn More <i class="bx bx-right-arrow-circle"></i>{' '}
             </p>
           </div>
-          <div className="card">
+          <div className="about-card">
             <img src={card2} alt="card2"></img>
             <h3>One To One Discussion</h3>
             <p>
@@ -77,7 +78,7 @@ export default function Home() {
               Learn More <i class="bx bx-right-arrow-circle"></i>{' '}
             </p>
           </div>
-          <div className="card">
+          <div className="about-card">
             <img src={card3} alt="card3"></img>
             <h3>End To End Support</h3>
             <p>
