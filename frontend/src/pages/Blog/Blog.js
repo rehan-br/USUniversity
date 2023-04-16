@@ -3,6 +3,7 @@ import './blog.css';
 import img1 from '../../assets/BlogPage/group-men-suits-hold-out-their-hands-unity 1.png';
 import img2 from '../../assets/BlogPage/group-men-suits-hold-out-their-hands-unity 2.png';
 import calicon from '../../assets/BlogPage/cal-icon.png';
+import arrow from '../../assets/BlogPage/arrow.png';
 
 export default function Blog(){
     return(
@@ -72,18 +73,106 @@ export default function Blog(){
                                 <div>
                                     <img src={calicon} alt='calicon'></img>
                                     <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
-                                </div> 
+                                </div>
                             </div>      
                         </div>
                     </div>
                 </div>
                 <div class='blog-list'>
                     <div class='blog-item'>
+                        <p class='blog-category'><span>Category A</span></p>
+                        <img src={img2}></img>
+                        <div class='n1'>
+                            <img src={calicon} alt='calicon'></img>
+                            <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
+                        </div>
+                        <h3>Lorem Ipsum is simply dummy text printing</h3>
+                        <div class='read-more'>
+                            <p>Read More</p>
+                            <img src={arrow}></img>
+                        </div>
+                    </div>
+                    <div class='blog-item'>
+                        <p class='blog-category'>Category A</p>
                         <img src={img2}></img>
                         <div>
                             <img src={calicon} alt='calicon'></img>
                             <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
                         </div>
+                        <h3>Lorem Ipsum is simply dummy text printing</h3>
+                        <div class='read-more'>
+                            <p>Read More</p>
+                            <img src={arrow}></img>
+                        </div>
+                    </div>
+                    <div class='blog-item'>
+                        <p class='blog-category'>Category A</p>
+                        <img src={img2}></img>
+                        <div>
+                            <img src={calicon} alt='calicon'></img>
+                            <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
+                        </div>
+                        <h3>Lorem Ipsum is simply dummy text printing</h3>
+                        <div class='read-more'>
+                            <p>Read More</p>
+                            <img src={arrow}></img>
+                        </div>
+                    </div>
+                    <div class='blog-item'>
+                        <p class='blog-category'>Category A</p>
+                        <img src={img2}></img>
+                        <div>
+                            <img src={calicon} alt='calicon'></img>
+                            <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
+                        </div>
+                        <h3>Lorem Ipsum is simply dummy text printing</h3>
+                        <div class='read-more'>
+                            <p>Read More</p>
+                            <img src={arrow}></img>
+                        </div>
+                    </div>
+                    <div class='blog-item'>
+                        <p class='blog-category'>Category A</p>
+                        <img src={img2}></img>
+                        <div>
+                            <img src={calicon} alt='calicon'></img>
+                            <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
+                        </div>
+                        <h3>Lorem Ipsum is simply dummy text printing</h3>
+                        <div class='read-more'>
+                            <p>Read More</p>
+                            <img src={arrow}></img>
+                        </div>
+                    </div>
+                    <div class='blog-item'>
+                        <p class='blog-category'>Category A</p>
+                        <img src={img2}></img>
+                        <div>
+                            <img src={calicon} alt='calicon'></img>
+                            <p>19th Jan 2022 - 12 Noon To 4 Pm</p>
+                        </div>
+                        <h3>Lorem Ipsum is simply dummy text printing</h3>
+                        <div class='read-more'>
+                            <p>Read More</p>
+                            <img src={arrow}></img>
+                        </div>
+                    </div>
+                </div>
+                <div class='page-numbers'>
+                    <div class='page-number'>
+                        <p></p>
+                    </div>
+                    <div class='page-number'>
+                        <p>1</p>
+                    </div>
+                    <div class='page-number'>
+                        <p>2</p>
+                    </div>
+                    <div class='page-number'>
+                        <p>3</p>
+                    </div>
+                    <div class='page-number'>
+                        <p></p>
                     </div>
                 </div>
             </section>
