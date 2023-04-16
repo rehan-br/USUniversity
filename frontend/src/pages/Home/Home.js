@@ -18,6 +18,7 @@ import section63 from '../../assets/Homepage/section6-3.png';
 import section64 from '../../assets/Homepage/section6-4.png';
 import section65 from '../../assets/Homepage/section6-5.png';
 import './home.css';
+import Testimonial from '../../components/Testimonial/Testimonial';
 export default function Home() {
   return (
     <div>
@@ -54,8 +55,9 @@ export default function Home() {
         <h1>
           Lorem ispum is simple <span className="underline">dummy</span> text
         </h1>
+
         <div className="about-cards">
-          <div className="card">
+          <div className="about-card">
             <img src={card1} alt="card1"></img>
             <h3>One Stop Study Solution</h3>
             <p>
@@ -66,7 +68,7 @@ export default function Home() {
               Learn More <i class="bx bx-right-arrow-circle"></i>{' '}
             </p>
           </div>
-          <div className="card">
+          <div className="about-card">
             <img src={card2} alt="card2"></img>
             <h3>One To One Discussion</h3>
             <p>
@@ -77,7 +79,7 @@ export default function Home() {
               Learn More <i class="bx bx-right-arrow-circle"></i>{' '}
             </p>
           </div>
-          <div className="card">
+          <div className="about-card">
             <img src={card3} alt="card3"></img>
             <h3>End To End Support</h3>
             <p>
@@ -302,6 +304,20 @@ export default function Home() {
             <img src={section65} alt="img"></img>
             <h2>We Will Register You To Your University</h2>
           </div>
+        </div>
+      </section>
+
+      <section className="section section7">
+        <h4 className="section-subheading">Testimonials</h4>
+        <h1 className="section-heading">
+          Read <span className="underline success">Testimonials</span>from our
+          alumni
+        </h1>
+        <div className="testimonials">
+          <Testimonial></Testimonial>
+          <Testimonial></Testimonial>
+          <Testimonial></Testimonial>
+          <Testimonial></Testimonial>
         </div>
       </section>
     </div>

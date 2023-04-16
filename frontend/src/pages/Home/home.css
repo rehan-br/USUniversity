@@ -96,12 +96,13 @@
   text-align: center;
 }
 .about-cards {
+  /* display: none; */
   margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
 
-.card {
+.about-card {
   height: 279px;
   width: 300px;
   background: #f5f5f5;
@@ -110,12 +111,12 @@
   gap: 15px;
 }
 
-.card h1 {
+.about-card h1 {
   font-size: 18px;
   font-weight: 700;
 }
 
-.card p {
+.about-card p {
   font-size: 16px;
 }
 
@@ -319,4 +320,22 @@
 
 .step-card h2 {
   font-size: 16px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section-subheading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #312259;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
 }
