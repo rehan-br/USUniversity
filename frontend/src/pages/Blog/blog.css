@@ -132,7 +132,6 @@ line-height: 24px;
 .category-container ul li{
     display: flex;
     padding-top: 15px;
-    padding-bottom: 15px;
     font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
@@ -148,7 +147,7 @@ color: #B9B8B8;
     padding-left: 0px;
 }
 
-.category-container ul li div{
+.category-container ul div{
     display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -160,7 +159,7 @@ margin-left: 194px;
 
 /* Gradient Color 2nd */
 
-background: #66D1FF;
+background: #EAEAEA;
 border-radius: 5px;
 
 /* Inside auto layout */
@@ -168,4 +167,106 @@ border-radius: 5px;
 flex: none;
 order: 1;
 flex-grow: 0;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #312259;
+/* identical to box height */
+
+text-align: center;
+}
+
+.category-container ul li:hover{
+  color: #66D1FF;
+}
+
+.recent-blog{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.recent-blog div{
+    display: flex;
+}
+
+
+.category-name{
+  display: flex;
+flex-direction: row;
+align-items: flex-start;
+gap: 10px;
+width: 67px;
+height: 22px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+margin-top: 0px;
+margin-right: 129px;
+/* identical to box height */
+
+
+/* Gradient Color */
+
+color: #312259;
+text-align: center;
+align-items: center;
+justify-content: center;
+
+
+background: #E9E0FF;
+border-radius: 10px;
+}
+
+.recent-items{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 20px;
+}
+
+#img1{
+  width: 134px;
+height: 92px;
+}
+
+.recent-items h3{
+margin-top: 0px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 130%;
+}
+
+.recent-items div p{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 9px;
+line-height: 130%;
+/* identical to box height, or 12px */
+
+
+/* Body Text */
+
+color: #787878;
+}
+
+.recent-items div{
+  display: flex;
+flex-direction: row;
+align-items: center;
+margin-bottom: 0px;
+}
+
+.blog-list{
+  display: grid;
+grid-template-columns: 1fr 1fr;
+margin-left: 530px;
 }
