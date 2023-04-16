@@ -321,3 +321,21 @@
 .step-card h2 {
   font-size: 16px;
 }
+
+.testimonials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section-subheading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #312259;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
