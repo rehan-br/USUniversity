@@ -42,7 +42,7 @@ export default function Navbars() {
             </Link>
           </Nav.Link>
           <Button className="applyOnline">Apply Online</Button>
-          <Button className="login">Login</Button>
+          <Button className="login"><Link className='link' to="/profile" style={{textDecoration:"none"}}>Login</Link></Button>
           <p>Arb | Eng</p>
         </Nav>
       </Container>
