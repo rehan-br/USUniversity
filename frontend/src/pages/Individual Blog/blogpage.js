@@ -103,7 +103,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 <div class='comment-box'>
                     <div class='comment-sub'>
                         <img id='profilepic' src={profilepic}></img>
-                        <div class='comment-inf0'>
+                        <div class='comment-info'>
                             <h4>Guzman Anthony</h4>
                             <p>12 July, 2021</p>
                         </div>
