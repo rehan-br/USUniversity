@@ -102,13 +102,42 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 </div>
                 <div class='comment-box'>
                     <div class='comment-sub'>
-                        <img id='profilepic' src={profilepic}></img>
-                        <div class='comment-info'>
-                            <h4>Guzman Anthony</h4>
-                            <p>12 July, 2021</p>
+                        <div class='comment-sub-sub'>
+                            <img id='profilepic' src={profilepic}></img>
+                            <div class='comment-info'>
+                                <h4>Guzman Anthony</h4>
+                                <p>12 July, 2021</p>
+                            </div>
+                            <div class='comment'>
+                                <p>“The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words. This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script”</p>
+                            </div>
                         </div>
                     </div>
                 </div>   
+            </section>
+            <section class='leave-comment'>
+                <div class='leave-comment-heading'>
+                    <h1>Leave a Comment:</h1>
+                </div>
+                <div class="comment-form">
+                    <form>
+                        <div class="form-group">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" placeholder='Your Name'></input>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder='Your Email'></input>
+                            </div>
+                        </div>
+                        <div class="form-group-2">
+                            <label for="comment">Comment:</label>
+                            <textarea id="comment" name="comment" rows="4" placeholder='Text Your Comment In Here...'></textarea>
+                        </div>
+                        <button id='submit-button'>Submit</button>
+                    </form>
+                </div>
             </section>
         </div>
     );

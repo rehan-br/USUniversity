@@ -80,7 +80,7 @@ export default function Blog(){
                 </div>
                 <div class='blog-list'>
                     <div class='blog-item'>
-                        <p class='blog-category'><span>Category A</span></p>
+                        <p class='blog-category-1'><span>Category A</span></p>
                         <img src={img2}></img>
                         <div class='n1'>
                             <img src={calicon} alt='calicon'></img>
@@ -93,7 +93,7 @@ export default function Blog(){
                         </div>
                     </div>
                     <div class='blog-item'>
-                        <p class='blog-category'>Category A</p>
+                        <p class='blog-category-1'>Category A</p>
                         <img src={img2}></img>
                         <div>
                             <img src={calicon} alt='calicon'></img>
@@ -106,7 +106,7 @@ export default function Blog(){
                         </div>
                     </div>
                     <div class='blog-item'>
-                        <p class='blog-category'>Category A</p>
+                        <p class='blog-category-1'>Category A</p>
                         <img src={img2}></img>
                         <div>
                             <img src={calicon} alt='calicon'></img>
@@ -119,7 +119,7 @@ export default function Blog(){
                         </div>
                     </div>
                     <div class='blog-item'>
-                        <p class='blog-category'>Category A</p>
+                        <p class='blog-category-1'>Category A</p>
                         <img src={img2}></img>
                         <div>
                             <img src={calicon} alt='calicon'></img>
@@ -132,7 +132,7 @@ export default function Blog(){
                         </div>
                     </div>
                     <div class='blog-item'>
-                        <p class='blog-category'>Category A</p>
+                        <p class='blog-category-1'>Category A</p>
                         <img src={img2}></img>
                         <div>
                             <img src={calicon} alt='calicon'></img>
@@ -145,7 +145,7 @@ export default function Blog(){
                         </div>
                     </div>
                     <div class='blog-item'>
-                        <p class='blog-category'>Category A</p>
+                        <p class='blog-category-1'>Category A</p>
                         <img src={img2}></img>
                         <div>
                             <img src={calicon} alt='calicon'></img>
