@@ -290,6 +290,10 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 
+.blog-item{
+  display: relative;
+}
+
 .blog-item div p{
   font-family: 'Poppins';
 font-style: normal;
@@ -301,7 +305,8 @@ margin-left: 18px;
 color: #787878;
 }
 
-.blog-category{
+.blog-category-1{
+  display: absolute;
 padding-top: 10px;
 padding-bottom: 10px;
 background: rgba(0, 0, 0, 0.6);
