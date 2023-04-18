@@ -3,6 +3,8 @@ import './service.css';
 import serviceA from '../../assets/ServicePage/service-A.png';
 import serviceB from '../../assets/ServicePage/service-B.png';
 import serviceC from '../../assets/ServicePage/service-C.png';
+import { Link } from 'react-router-dom';
+import ServiceDetail from '../ServiceDetail/ServiceDetail.js';
 export default function Service() {
   return (
     <div>
@@ -29,12 +31,14 @@ export default function Service() {
             popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages.
           </p>
-          <button className="service-section-content-btn">
-            <span>Read More</span>
-            <span>
-              <i class=" bx bx-right-arrow-circle"></i>
-            </span>
-          </button>
+          <Link to="/service/details">
+            <button className="service-section-content-btn">
+              <span>Read More</span>
+              <span>
+                <i class=" bx bx-right-arrow-circle"></i>
+              </span>
+            </button>
+          </Link>
         </div>
       </section>
 
