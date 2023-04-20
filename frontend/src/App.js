@@ -11,6 +11,7 @@ import Contact from './pages/Contact/contact.js';
 import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
+import VisaForStudy from './pages/VisaForStudy/visaforstudy.js';
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />}></Route>
           <Route path="/service/details" element={<ServiceDetail />}></Route>
+
           <Route path="/blogpagetest" element={<BlogPage />}></Route>
+          <Route path='/visaforstudy' element={<VisaForStudy />}></Route>
           {/*Above Test Route Delete Later*/}
         </Routes>
       </main>
