@@ -6,12 +6,13 @@ import germany from '../../assets/Profile/Flag2.png'
 import england from '../../assets/Profile/england.png'
 import canada from '../../assets/Profile/canada.png'
 import japan from '../../assets/Profile/japan.png'
+import pic3 from '../../assets/Registrationform/pic3.png'
 import { useState } from "react";
 import './rf.css';
 
 
 
-export default function Rf1() {
+export default function Rf2() {
     const [selected, setSelected] = useState(null);
 
     function handleCheckboxChange(event) {
@@ -32,8 +33,9 @@ export default function Rf1() {
   const handleEditClick = () => {
     setIsEditable(!isEditable);
   }
-    return (
-      <div className="top">
+    
+  return (
+    <div className="top">
         <h1>Registration Form</h1>
         <div className="page1image">
         <img  src={pic2} alt=''></img>
@@ -67,7 +69,7 @@ export default function Rf1() {
                 </div>
             </div>
 
-             <div className="inputf">
+            <div className="inputf">
                 <div className="nameinput">
                 <p>Date of Birth<span className='imp'>*</span></p>
                 <input className="i" type="date" id="dob"  disabled={isEditable ? false : true}    />
@@ -84,7 +86,59 @@ export default function Rf1() {
                 </select>
                 </div>
                       
-        </div>
+            </div>
+
+            <div className="inputf">
+            <div className="emailinput">
+                <p>Last Education<span className='imp'>*</span></p>
+                <select className="nation" disabled={isEditable ? false : true} >
+                    <option value="">Select Education</option>
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                    <option value="option4">option4</option>
+                    <option value="option5">option5</option>
+                </select>
+                </div>
+                <div className="emailinput">
+                <p>Year of Graduation<span className='imp'>*</span></p>
+                <select className="nation" disabled={isEditable ? false : true} >
+                    <option value="">Select Year of Graduation</option>
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                    <option value="option4">option4</option>
+                    <option value="option5">option5</option>
+                </select>
+                </div>
+                      
+            </div>
+
+            <div className="inputf">
+            <div className="emailinput">
+                <p>Field of Study<span className='imp'>*</span></p>
+                <select className="nation" disabled={isEditable ? false : true} >
+                    <option value="">Select Field of study</option>
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                    <option value="option4">option4</option>
+                    <option value="option5">option5</option>
+                </select>
+                </div>
+                <div className="emailinput">
+                <p>English Skill<span className='imp'>*</span></p>
+                <select className="nation" disabled={isEditable ? false : true} >
+                    <option value="">Select English Skill</option>
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                    <option value="option4">option4</option>
+                    <option value="option5">option5</option>
+                </select>
+                </div>
+                      
+            </div>
 
            
         <p>Gender</p>
@@ -111,17 +165,26 @@ export default function Rf1() {
                                  <img disabled={isEditable ? false : true} src={canada} alt="Image 5" className={selectedImages.includes("image5.jpg") ? "selected" : ""} onClick={toggleSelected} />
                               </div>
                               <div className=" desire">
-                                   <p>Your desired School</p>
+                                   <p>Your desired University</p>
                                      <input disabled={isEditable ? false : true}  type="text" placeholder="Type a tag and press Enter"/>
   
                                  </div>
                                  <div  >
-                                     <p for="skill">English Skill</p>
+                                     <p for="skill">Your Desired Major</p>
                                      <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="skill" name="skill">
-                                     <option value="">--Please select your English skill--</option>
-                                     <option value="Beginner">Beginner</option>
-                                     <option value="Intermediate">Intermediate</option>
-                                     <option value="Fluent">Fluent</option>
+                                     <option value=""></option>
+                                     <option value="">option1</option>
+                                     <option value="">option2</option>
+                                     <option value="">option3</option>
+                                     </select>
+                                 </div>
+                                 <div  >
+                                     <p for="skill">Desired Degree</p>
+                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="skill" name="skill">
+                                     <option value=""></option>
+                                     <option value="">option1</option>
+                                     <option value="">option2</option>
+                                     <option value="">option3</option>
                                      </select>
                                  </div>
                                  <div>
@@ -148,5 +211,4 @@ export default function Rf1() {
         </div>
         
       </div>
-    );
-  }
+);}
