@@ -12,6 +12,16 @@ import './rf.css';
 
 
 export default function Rf1() {
+
+  const [name, setname] = useState("")
+  const [email, setemail] = useState("")
+  const [dob, setdob] = useState("")
+  const [Nationality,setnationality] = useState("")
+  const [gender,setgender] = useState("")
+  const [desiredschool , setdesiredschool] =useState("")
+  const [englishskill , setenglishskill] = useState("")
+  const [consultationpackage , setconsultationpackage ] = useState("")
+ 
     const [selected, setSelected] = useState(null);
 
     function handleCheckboxChange(event) {
@@ -32,6 +42,8 @@ export default function Rf1() {
   const handleEditClick = () => {
     setIsEditable(!isEditable);
   }
+
+  
     return (
       <div className="top">
         <h1>Registration Form</h1>
@@ -59,22 +71,22 @@ export default function Rf1() {
             <div className="inputf">
                 <div className="nameinput">
                 <p>First Name<span className='imp'>*</span></p>
-                <input className="i"   disabled={isEditable ? false : true}   type="text"  />
+                <input className="i"   disabled={isEditable ? false : true}   type="text" onChange = {(event) => {setname(event.target.value)}}  />
                 </div>
                 <div className="nameinput">
                 <p>Email<span className='imp'>*</span></p>
-                <input className="i" disabled={isEditable ? false : true} type="email"  />
+                <input className="i" disabled={isEditable ? false : true} type="email" onChange = {(event) => {setemail(event.target.value)}}  />
                 </div>
             </div>
 
              <div className="inputf">
                 <div className="nameinput">
                 <p>Date of Birth<span className='imp'>*</span></p>
-                <input className="i" type="date" id="dob"  disabled={isEditable ? false : true}    />
+                <input className="i" type="date" id="dob"  disabled={isEditable ? false : true} onChange = {(event) => {setdob(event.target.value)}}   />
                 </div>
                 <div className="emailinput">
                 <p>Nationality<span className='imp'>*</span></p>
-                <select className="nation" disabled={isEditable ? false : true} >
+                <select className="nation" disabled={isEditable ? false : true} onChange = {(event) => {setnationality(event.target.value)}} >
                     <option value="">Select Nationality</option>
                     <option value="usa">USA</option>
                     <option value="canada">Canada</option>
@@ -117,7 +129,7 @@ export default function Rf1() {
                                  </div>
                                  <div  >
                                      <p for="skill">English Skill</p>
-                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="skill" name="skill">
+                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="skill" name="skill" onChange = {(event) => {setenglishskill(event.target.value)}}>
                                      <option value="">--Please select your English skill--</option>
                                      <option value="Beginner">Beginner</option>
                                      <option value="Intermediate">Intermediate</option>
@@ -126,7 +138,7 @@ export default function Rf1() {
                                  </div>
                                  <div>
                                     <p>Ordered Consultation Package</p>
-                                    <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="package" name="package">
+                                    <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="package" name="package" onChange = {(event) => {setconsultationpackage(event.target.value)}}>
                                      <option value="">--Please select your Ordered Consultation Pacakge--</option>
                                      <option value="ConsultationA">Consultation A</option>
                                      <option value="ConsultationB">Consultation B</option>
