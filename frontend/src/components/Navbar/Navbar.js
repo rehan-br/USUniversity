@@ -41,11 +41,13 @@ export default function Navbars() {
               Contact Us
             </Link>
           </Nav.Link>
-          <Button className="applyOnline">Apply Online</Button>
+          <Link className="link" to="/reg">
+            <Button className="applyOnline">Apply Online</Button>
+          </Link>
           <Button className="login">
             <Link
               className="link"
-              to="/profile"
+              to="/login"
               style={{ textDecoration: 'none' }}
             >
               Login
