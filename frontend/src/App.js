@@ -17,6 +17,7 @@ import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
 import VisaForStudy from './pages/VisaForStudy/visaforstudy.js';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
+import Germany from './pages/VisaForStudy/Germany';
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +46,7 @@ function App() {
           <Route path="/country" element={<VisaForStudy />}></Route>
           <Route path="/canada" element={<Canada />}></Route>
           <Route path="/usa" element={<Usa />}></Route>
+          <Route path="/germany" element={<Germany />}></Route>
           {/*Above Test Route Delete Later*/}
         </Routes>
       </main>
