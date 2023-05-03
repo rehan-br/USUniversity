@@ -1,32 +1,91 @@
 import React from 'react';
 import './footer.css';
-import { Link } from 'react-router-dom';
-
+import twitter from '../../assets/Footer/twitter.png';
+import instagram from '../../assets/Footer/insta.png';
+import facebook from '../../assets/Footer/fb.png';
 export default function Footer() {
   return (
-    <section className="section-footer">
-      <div className="footer-flex">
-        <div className="our-contact">
-          <h3 className="footer-heading">Our Contact</h3>
-          <p className="footer-para">
-            Address : Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry.
-          </p>
-          <p className="footer-para">(01) 0101-0101-0101</p>
-          <p className="footer-para">info@youremail.org</p>
-          <div className="footer-icons">
-            <Link>
-              <i class="bx bxl-twitter"></i>
-            </Link>
-            <Link>
-              <i class="bx bxl-facebook-circle"></i>
-            </Link>
-            <Link>
-              <i class="bx bxl-facebook-circle"></i>
-            </Link>
-          </div>
+    <div className="footer">
+      <div className="footer-content">
+        <h2>Our Content</h2>
+        <p>
+          Address: Lorem pipsum is simply sum dummy text of the printing and
+          typesetting industry
+        </p>
+        <p>(01) 0101-0101-1010</p>
+        <p>info@gmail.com</p>
+        <div className="social">
+          <img src={twitter} alt="twitter" />
+          <img src={facebook} alt="facebook" />
+          <img src={instagram} alt="instagram" />
         </div>
       </div>
-    </section>
+      <div className="footer-content pages">
+        <h2>Pages</h2>
+        <ul>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>About us</a>
+          </li>
+          <li>
+            <a>Service</a>
+          </li>
+          <li>
+            <a>Contact</a>
+          </li>
+          <li>
+            <a>Blog</a>
+          </li>
+          <li>
+            <a>Login</a>
+          </li>
+        </ul>
+      </div>
+      <div className="footer-content pages">
+        <h2>Service</h2>
+        <ul>
+          <li>
+            <a>Service A</a>
+          </li>
+          <li>
+            <a>Service B</a>
+          </li>
+          <li>
+            <a>Service C</a>
+          </li>
+          <li>
+            <a>Service D</a>
+          </li>
+          <li>
+            <a>Service E</a>
+          </li>
+        </ul>
+      </div>
+      <div className="footer-content pages">
+        <h2>Country</h2>
+
+        <ul>
+          <li>
+            <a>Destination</a>
+          </li>
+          <li>
+            <a>Visa Student</a>
+          </li>
+        </ul>
+      </div>
+      <div className="footer-content">
+        <h2>Don't Miss Out!</h2>
+        <p>
+          Lorem pipsum is simply sum dummy text of the printing and typesetting
+          industry
+        </p>
+        <div className="subscribe">
+          <input type="email" placeholder="Enter your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
   );
 }

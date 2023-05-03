@@ -7,7 +7,7 @@ import Profile1 from './pages/Profile/profile1.js';
 import Profile2 from './pages/Profile/profile2.js';
 import Rf1 from './pages/RegisterationForm/Rf1.js';
 import Contact from './pages/Contact/contact';
-
+import Footer from './components/Footer/Footer.js';
 import Rf2 from './pages/RegisterationForm/Rf2.js';
 import Rf3 from './pages/RegisterationForm/Rf3.js';
 import Rf4 from './pages/RegisterationForm/Rf4.js';
@@ -15,6 +15,7 @@ import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
 import VisaForStudy from './pages/VisaForStudy/VisaForStudy.js';
+import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 function App() {
   return (
@@ -43,9 +44,13 @@ function App() {
           <Route path="/blogpagetest" element={<BlogPage />}></Route>
           <Route path="/country" element={<VisaForStudy />}></Route>
           <Route path="/canada" element={<Canada />}></Route>
+          <Route path="/usa" element={<Usa />}></Route>
           {/*Above Test Route Delete Later*/}
         </Routes>
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </BrowserRouter>
   );
 }

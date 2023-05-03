@@ -44,25 +44,25 @@ export default function VisaForStudy() {
           Check info about Study Visa in your destination country
         </p>
         <div className="studyVisaSection-btnContainer">
-          <Link className="link" to="/">
+          <Link className="link" to="/usa">
             <button className="studyVisaSection-btnContainer-btn">
               <img src={usa} alt="flag"></img>
               <span>USA Study Visa</span>
             </button>
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/england">
             <button className="studyVisaSection-btnContainer-btn">
               <img src={england} alt="flag"></img>
               <span>England Study Visa</span>
             </button>
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/japan">
             <button className="studyVisaSection-btnContainer-btn">
               <img src={japan} alt="flag"></img>
               <span>Japan Study Visa</span>
             </button>
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/germany">
             <button className="studyVisaSection-btnContainer-btn">
               <img src={germany} alt="flag"></img>
               <span>Germany Study Visa</span>
