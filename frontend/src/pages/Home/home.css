@@ -1,12 +1,3 @@
-.underline {
-  position: relative;
-  margin-right: 2rem;
-}
-
-.success {
-  color: #312259;
-}
-
 .underline:after {
   content: '';
   position: absolute;
@@ -338,4 +329,13 @@
   font-size: 30px;
   font-weight: 700;
   text-align: center;
+}
+
+.underline {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.success {
+  color: #312259;
 }

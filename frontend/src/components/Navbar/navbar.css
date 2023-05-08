@@ -66,3 +66,23 @@ Button:hover {
 Nav p {
   margin-left: 20px;
 }
+
+.login-div {
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.login-container {
+  background-color: white;
+  height: 400px;
+  width: 800px;
+  padding: 20px;
+}
