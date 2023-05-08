@@ -15,6 +15,11 @@ import england from '../../assets/VisaForStudy/england.png';
 import japan from '../../assets/VisaForStudy/japan.png';
 import germanyarticle from '../../assets/VisaForStudy/germanyarticle.png';
 import germanyvisa from '../../assets/VisaForStudy/germanyvisa.png';
+import englandarticle from '../../assets/VisaForStudy/englandarticle.png';
+import englandvisa from '../../assets/VisaForStudy/englandvisa.png';
+import japanarticle from '../../assets/VisaForStudy/japanarticle.png';
+import japanvisa from '../../assets/VisaForStudy/japanvisa.png';
+
 const articleData = {
   about:
     'Germany is a popular destination for international students seeking a quality education. With over 400 universities and colleges to choose from, Germany offers a wide variety of academic programs and disciplines to suit every interest and career goal. Many of these institutions are renowned for their excellence in research and innovation, and graduates from German universities are highly sought after by employers worldwide. Studying in Germany also offers opportunities for cultural immersion and personal growth, as students can experience the rich diversity of German society and explore its many historical and cultural attractions. Overall, studying in Germany can be a transformative experience that provides both academic and personal benefits.',
@@ -38,48 +43,49 @@ const visaData = {
       'Germany is a popular destination for international students seeking a quality education. With over 400 universities and colleges to choose from, Germany offers a wide variety of academic programs and disciplines to suit every interest and career goal. Many of these institutions are renowned for their excellence in research and innovation, and graduates from German universities are highly sought after by employers worldwide. Studying in Germany also offers opportunities for cultural immersion and personal growth, as students can experience the rich diversity of German society and explore its many historical and cultural attractions. Overall, studying in Germany can be a transformative experience that provides both academic and personal benefits.',
   },
   firstHeading: {
-    heading: 'Germany Visa',
+    heading: 'Japan Visa',
     content:
       "Studying in Germany is a dream come true for many international students, and obtaining a student visa is an essential part of making that dream a reality. The process of applying for a German study visa can be complex and time-consuming, requiring careful preparation and attention to detail. To obtain a study visa, students must first apply to a German institution and receive an acceptance letter, after which they can begin the visa application process. The application process for a German study visa can be a daunting prospect for many international students, particularly those who are unfamiliar with the German immigration system. However, with the right preparation and guidance, it can be navigated successfully. Students must demonstrate that they have sufficient financial resources to support themselves during their studies and provide academic transcripts to show that they meet the institution's admission requirements. They must also attend an interview at a German embassy or consulate, during which they will be asked about their plans for studying in Germany and their ties to their home country. Despite the challenges of the visa application process, the benefits of studying in Germany are many. Germany is home to some of the world's most renowned universities and offers a diverse range of academic programs across a wide range of disciplines. Studying in Germany provides students with access to world-class facilities and resources, as well as opportunities for research and professional development. Additionally, the multicultural environment of German universities offers international students the chance to broaden their horizons and build cross-cultural skills that will serve them well in their personal and professional lives. Moreover, the process of obtaining a German study visa can be a valuable learning experience in itself, helping students develop important skills such as time management, organization, and communication. Many German institutions offer resources and support services to help international students navigate the visa application process, including workshops, online resources, and dedicated staff who can answer questions and provide guidance. With the right support and preparation, the process of obtaining a German study visa can be a positive and rewarding experience for international students seeking to further their education and career prospects in Germany.",
   },
   secondHeading: {
-    heading: 'Types of Germany Visa',
+    heading: 'Types of Japan  Visa',
     content:
       "Germany offers a diverse range of visa categories, each with its own specific requirements and eligibility criteria. Similar to the United States, there are various visa options available for individuals planning to travel to Germany. Tourist visas, known as Schengen visas, are intended for individuals visiting Germany for leisure or medical purposes. Business visas, or business Schengen visas, are designed for individuals traveling to Germany for business-related activities such as attending conferences, meetings, or conducting research.For those seeking employment in Germany, there are several visa categories to consider. The EU Blue Card is available for highly skilled professionals and grants them the right to live and work in Germany. The Job Seeker Visa allows individuals to reside in Germany while actively searching for employment opportunities. Additionally, there are specific visas for self-employed individuals, freelancers, and entrepreneurs who wish to establish businesses in Germany.Germany also offers various visa options for individuals looking to immigrate permanently. Family reunification visas are available for individuals who have family members residing in Germany. There are also employment-based visas for skilled workers in high-demand occupations. The German government has established specific criteria and processes for each of these visa categories.Navigating the complex landscape of German visas can be challenging, but with the appropriate guidance and support, it is possible to find the visa that best matches your needs and eligibility. It is crucial to thoroughly assess your goals and intentions for traveling to Germany and to seek advice from immigration professionals or experienced travelers who can provide valuable insight and assistance throughout the visa application process.",
   },
   thirdHeading: {
-    heading: 'Germany Study Visa Documents',
+    heading: 'Japan Study Visa Documents',
     content:
       "Applying for a study visa in Germany requires a variety of documents to demonstrate the student's eligibility and qualifications. The specific required documents may vary depending on the individual's situation and the institution they intend to study at, but generally include academic transcripts, standardized test scores, financial statements, and a valid passport. Academic transcripts play a crucial role in the application process, providing evidence of the student's educational background and their ability to thrive in a German academic program. Standardized test scores, such as the TestDaF or DSH, are often necessary to demonstrate the student's proficiency in the German language. Financial documents, such as bank statements or sponsorship letters, are essential to prove that the student has sufficient funds to cover their living expenses and tuition fees in Germany. Additionally, students may need to provide documentation showcasing their ties to their home country, such as family relationships, property ownership, or employment prospects. Alongside the required documents, students may also be asked to submit supplementary materials like a personal statement, letters of recommendation, or a curriculum vitae. It is crucial to carefully review the specific requirements of the institution and visa category being applied for, ensuring that all documents are accurate, up-to-date, and properly formatted. Although the documentation requirements for a study visa in Germany can feel overwhelming, with thorough planning and attention to detail, it is possible to compile a strong application. Many German institutions offer resources and support services to assist international students throughout the visa application process, including guidance on required documents and tips for preparing a successful application. By closely collaborating with these resources and seeking the guidance of experienced immigration professionals, students can increase their chances of obtaining a study visa in Germany.",
   },
   fourthHeading: {
-    heading: 'Germany Visa Fee',
+    heading: 'Japan Visa Fee',
     content:
       "The cost of a German study visa varies depending on the type of visa being applied for and the country of origin of the applicant. Along with the visa application fee, there might be additional charges for services such as biometric data collection, visa processing, or expedited services. As of 2023, the fee for a nonimmigrant student visa (F-1 visa) is €75, with additional fees specific to Germany. These fees are used to support the visa application process and administrative services. It's important to note that the visa application fee is generally non-refundable, even if the visa is ultimately denied. Additionally, some countries may require additional fees or taxes on top of the standard visa fees, so it's crucial to carefully review the requirements for the specific country of origin. While the cost of a German study visa can be significant, it's essential to consider it as an investment in one's education and future career opportunities. There may be scholarship or funding opportunities available to help offset the costs of studying in Germany, and many institutions offer resources and support to help international students navigate the financial aspects of studying abroad. By carefully planning and budgeting for the cost of a German study visa, students can ensure that they are able to make the most of their academic opportunities in Germany.",
   },
 };
 
 const uniData = [
-    'Technical University of Munich',
-    'Ludwig Maximilian University of Munich',
-    'Heidelberg University',
-    'Humboldt University of Berlin',
-    'Free University of Berlin',
-    'University of Freiburg',
-    'University of Tübingen',
-    'University of Göttingen',
-    'Karlsruhe Institute of Technology',
-    'University of Bonn',
-    'RWTH Aachen University',
-    'University of Hamburg',
-    'University of Erlangen-Nuremberg',
-    'University of Cologne',
-    'University of Münster',
-    'University of Stuttgart',
-    'University of Frankfurt',
-    'University of Marburg',
-    'University of Konstanz',
-    'University of Würzburg',
+    
+    'University of Tokyo',
+    'Kyoto University',
+    'Osaka University',
+    'Tohoku University',
+    'Hokkaido University',
+    'Nagoya University',
+    'Keio University',
+    'Kyushu University',
+    'Tsukuba University',
+    'Waseda University',
+    'Kobe University',
+    'Hiroshima University',
+    'Nagasaki University',
+    'Yokohama National University',
+    'Okayama University',
+    'Kanazawa University',
+    'Chiba University',
+    'Tohoku University of Art and Design',
+    'University of Shizuoka',
+    'University of Tsukuba',
 ];
 
 const comments = [
@@ -149,13 +155,13 @@ export default function Canada() {
     <div className="country-page">
       <div className="country-page-mainHeading-section">
         <img
-          src={germany}
+          src={japan}
           className="country-page-mainHeading-section-img"
           alt="flag"
         ></img>
-        <h1>Germany</h1>
+        <h1>Japan</h1>
         <p>
-          Home {'>'} Visa For Study {'>'} Germany
+          Home {'>'} Visa For Study {'>'} Japan
         </p>
       </div>
 
@@ -196,11 +202,11 @@ export default function Canada() {
 
       <div className="country-page-mainContent">
         {activeButton === 'article' && (
-          <Article articleData={articleData} imageSource={germanyarticle}></Article>
+          <Article  articleData={articleData} imageSource={japanarticle}></Article>
         )}
 
         {activeButton === 'visa' && (
-          <Visa visaData={visaData} imageSource={germanyvisa}></Visa>
+          <Visa visaData={visaData} imageSource={japanvisa}></Visa>
         )}
 
         {activeButton === 'university' && (
@@ -278,16 +284,16 @@ export default function Canada() {
               <span>Canada Study Visa</span>
             </button>
           </Link>
+          <Link className="link" to="/germany">
+            <button className="studyVisaSection-btnContainer-btn">
+              <img src={germany} alt="flag"></img>
+              <span>Germany Study Visa</span>
+            </button>
+          </Link>
           <Link className="link" to="/england">
             <button className="studyVisaSection-btnContainer-btn">
               <img src={england} alt="flag"></img>
               <span>England Study Visa</span>
-            </button>
-          </Link>
-          <Link className="link" to="/japan">
-            <button className="studyVisaSection-btnContainer-btn">
-              <img src={japan} alt="flag"></img>
-              <span>Japan Study Visa</span>
             </button>
           </Link>
           <Link className="link" to="/usa">
