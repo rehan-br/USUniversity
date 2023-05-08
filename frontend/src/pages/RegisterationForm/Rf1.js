@@ -8,6 +8,7 @@ import canada from '../../assets/Profile/canada.png';
 import japan from '../../assets/Profile/japan.png';
 import { useState } from 'react';
 import './rf.css';
+import { Link } from 'react-router-dom';
 
 export default function Rf1({ handleFormData }) {
   const [name, setname] = useState('');
@@ -67,7 +68,7 @@ export default function Rf1({ handleFormData }) {
         <img src={Section1} alt=""></img>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="formsection">
           <div className="fir">
             <h2>
@@ -77,7 +78,7 @@ export default function Rf1({ handleFormData }) {
           </div>
           <div className="TB">
             <button>School</button>
-            <button>University</button>
+           <Link className='link' to='/reg2'> <button>University</button></Link>
             <hr style={{ marginTop: '30px' }}></hr>
           </div>
 
@@ -268,7 +269,7 @@ export default function Rf1({ handleFormData }) {
           </div>
 
           <div className="savebt">
-            <button>Save & Next</button>
+        <Link className='link' to ='/reg3'><button>Save & Next</button></Link>
           </div>
         </div>
       </form>

@@ -10,7 +10,7 @@ export default function ServiceDetail() {
       <div className="serviceDetail-mainHeadingDiv">
         <div className="serviceDetail-mainHeadingDiv-content">
           <h1 className="serviceDetail-mainHeadingDiv-content-heading">
-            Consultation A
+            Consultation 
           </h1>
           <p className="serviceDetail-mainHeadingDiv-content-subHeading">
             Home <i class="bx bx-chevron-right"></i> Our Service{' '}

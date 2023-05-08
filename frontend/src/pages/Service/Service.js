@@ -56,12 +56,14 @@ export default function Service() {
             popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages.
           </p>
+          <Link to="/service/details">
           <button className="service-section-content-btn">
             Read More
             <span>
               <i class="bx bx-right-arrow-circle"></i>
             </span>
           </button>
+          </Link>
         </div>
         <div className="service-section-img">
           <img src={serviceB} alt="service-img"></img>
@@ -85,12 +87,14 @@ export default function Service() {
             popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages.
           </p>
+          <Link to="/service/details">
           <button className="service-section-content-btn">
             Read More
             <span>
               <i class="bx bx-right-arrow-circle"></i>
             </span>
           </button>
+          </Link>
         </div>
       </section>
     </div>

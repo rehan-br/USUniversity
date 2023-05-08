@@ -17,6 +17,9 @@ import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
 import VisaForStudy from './pages/VisaForStudy/VisaForStudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
+import Germany from './pages/VisaForStudy/Germany';
+import  England from './pages/VisaForStudy/England';
+import  Japan from './pages/VisaForStudy/Japan';
 function App() {
   return (
     <BrowserRouter>
@@ -45,7 +48,10 @@ function App() {
           <Route path="/country" element={<VisaForStudy />}></Route>
           <Route path="/canada" element={<Canada />}></Route>
           <Route path="/usa" element={<Usa />}></Route>
-          {/*Above Test Route Delete Later*/}
+          <Route path="/germany" element={<Germany />}></Route>
+          <Route path="/england" element={<England />}></Route>
+          <Route path="/japan" element={<Japan />}></Route>
+         
         </Routes>
       </main>
       <footer>

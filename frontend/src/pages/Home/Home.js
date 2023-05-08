@@ -154,7 +154,7 @@ export default function Home() {
             <h2>England</h2>
           </div>
         </div>
-        <button className="applyOnlineBtn">Apply Online</button>
+        <Link className='link' to='./reg'><button className="applyOnlineBtn">Apply Online</button></Link>
       </section>
 
       <section className="section section5">
