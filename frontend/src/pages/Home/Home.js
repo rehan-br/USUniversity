@@ -17,6 +17,7 @@ import section62 from '../../assets/Homepage/section6-2.png';
 import section63 from '../../assets/Homepage/section6-3.png';
 import section64 from '../../assets/Homepage/section6-4.png';
 import section65 from '../../assets/Homepage/section6-5.png';
+import { Link } from 'react-router-dom';
 import './home.css';
 import Testimonial from '../../components/Testimonial/Testimonial';
 export default function Home() {
@@ -37,12 +38,16 @@ export default function Home() {
             industry. Lorem Ipsum has been the industry's standard dummy text.
           </p>
           <div className="sec1-btns">
-            <button className="apply-online-btn">
-              Apply Online<img src={applyOnlineIcon} alt="icon"></img>
-            </button>
-            <button className="discover-more-btn">
-              <img src={discoverMoreIcon} alt="icon"></img>Discover More
-            </button>
+            <Link className="link" to="/reg">
+              <button className="apply-online-btn">
+                Apply Online<img src={applyOnlineIcon} alt="icon"></img>
+              </button>
+            </Link>
+            <Link className="link" to="/country">
+              <button className="discover-more-btn">
+                <img src={discoverMoreIcon} alt="icon"></img>Discover More
+              </button>
+            </Link>
           </div>
         </div>
         <div className="image-right">
@@ -108,7 +113,9 @@ export default function Home() {
             remaining essentially unchanged. It was popularised in the 1960s
             with the release of Letraset sheets containing Lorem Ipsum passages.
           </p>
-          <button>Apply Online</button>
+          <Link className="link" to="/reg">
+            <button>Apply Online</button>
+          </Link>
         </div>
         <div>
           <img src={aboutImage} alt=""></img>
@@ -147,7 +154,7 @@ export default function Home() {
             <h2>England</h2>
           </div>
         </div>
-        <button className="applyOnlineBtn">Apply Online</button>
+        <Link className='link' to='./reg'><button className="applyOnlineBtn">Apply Online</button></Link>
       </section>
 
       <section className="section section5">
@@ -194,7 +201,9 @@ export default function Home() {
             </div>
             <div className="pricing">
               <h2>$100</h2>
-              <button>Apply Now!</button>
+              <Link className="link" to="/reg">
+                <button>Apply Now!</button>
+              </Link>
             </div>
           </div>
 
@@ -232,7 +241,9 @@ export default function Home() {
             </div>
             <div className="pricing">
               <h2>$200</h2>
-              <button>Apply Now!</button>
+              <Link className="link" to="/reg">
+                <button>Apply Now!</button>
+              </Link>
             </div>
           </div>
 
@@ -270,7 +281,9 @@ export default function Home() {
             </div>
             <div className="pricing">
               <h2>$300</h2>
-              <button>Apply Now!</button>
+              <Link className="link" to="/reg">
+                <button>Apply Now!</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -23,11 +23,7 @@ export default function Rf3() {
                 <p>Schedule a Consultation with us</p>
             </div>
 
-            <div>
-                <h4><strong>Date:</strong></h4>
-                <iframe src="https://calendar.google.com/calendar/embed?src=85f4bb1ec75e77c256ac2b25ab913e7c7f087043841cd338713433723b973407%40group.calendar.google.com&ctz=Asia%2FKarachi" ></iframe>
-
-            </div>
+            
 
         </div>    
     </div>
