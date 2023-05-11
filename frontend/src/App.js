@@ -14,10 +14,11 @@ import Rf4 from './pages/RegisterationForm/Rf4.js';
 import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
-import VisaForStudy from './pages/VisaForStudy/VisaForStudy';
+import VisaForStudy from './pages/VisaForStudy/visaforstudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 import Germany from './pages/VisaForStudy/Germany';
+<<<<<<< HEAD
 import England from './pages/VisaForStudy/England';
 import Japan from './pages/VisaForStudy/Japan';
 import University from './pages/University/University';
@@ -113,6 +114,11 @@ const torontoUniversity = {
   ],
 };
 
+=======
+import  England from './pages/VisaForStudy/England';
+import  Japan from './pages/VisaForStudy/Japan';
+import About from './pages/About/About';
+>>>>>>> d5a89fba375fae0d284fbef880685736dc425f7b
 function App() {
   return (
     <BrowserRouter>
@@ -144,6 +150,7 @@ function App() {
           <Route path="/germany" element={<Germany />}></Route>
           <Route path="/england" element={<England />}></Route>
           <Route path="/japan" element={<Japan />}></Route>
+<<<<<<< HEAD
 
           <Route
             path="/visaforstudy/canada/torontouniversity"
@@ -155,6 +162,9 @@ function App() {
               />
             }
           ></Route>
+=======
+          <Route  path="/about" element={<About />}></Route>
+>>>>>>> d5a89fba375fae0d284fbef880685736dc425f7b
         </Routes>
       </main>
       <footer>
