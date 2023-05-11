@@ -14,12 +14,13 @@ import Rf4 from './pages/RegisterationForm/Rf4.js';
 import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
-import VisaForStudy from './pages/VisaForStudy/VisaForStudy';
+import VisaForStudy from './pages/VisaForStudy/visaforstudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 import Germany from './pages/VisaForStudy/Germany';
 import  England from './pages/VisaForStudy/England';
 import  Japan from './pages/VisaForStudy/Japan';
+import About from './pages/About/About';
 function App() {
   return (
     <BrowserRouter>
@@ -51,7 +52,7 @@ function App() {
           <Route path="/germany" element={<Germany />}></Route>
           <Route path="/england" element={<England />}></Route>
           <Route path="/japan" element={<Japan />}></Route>
-         
+          <Route  path="/about" element={<About />}></Route>
         </Routes>
       </main>
       <footer>

@@ -118,3 +118,94 @@
     background-color: #312259;
     color: aliceblue;
   }
+  .contact-button button:hover{
+    background-color: #AE323A;
+  }
+  @media only screen and (max-width: 400px) {
+    .us img {
+    height: 25px;
+    width: 20px;
+    }
+    .us p{
+      align-items: center;
+    }
+    * p{
+      font-size: 15px;
+    }
+     h2{
+      font-size: 16px;
+    }
+    .contact{
+      margin-left: 40px;
+    }
+    .mainpage {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 5%;
+    height: auto;
+    }
+    .mainpage p{
+      margin-left: 25px;
+    }
+    
+    .right-div {
+    margin-left: 10px;
+    margin-top: 30px;
+    }
+    
+    .largearea textarea {
+    height: 100px;
+    width: 100%;
+    }
+    
+    .inputs-right input {
+    height: 40px;
+    width: 100%;
+    }
+    
+    .contact-button button {
+    height: 40px;
+    width: 150px;
+    margin-left: 110px;
+    }
+    .left-div img{
+      height: 300px;
+      width: 300px;
+      padding: 20px;
+      margin-top: 120px;
+      
+      gap: 1%;
+    }
+    .details  img{
+      height: 20px;
+      width: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+      
+    }
+    
+    .details{
+      margin-left: 20px;
+      display: flex;
+      gap: 1px;
+    }
+    .details p{
+      margin-top: 5px;
+    }
+    .contact{
+      order: 1;
+    }
+    .right-div{
+      order: 2;
+    }
+    .contact-button{
+      order: 3;
+    }
+    .left-div{
+      order: 4;
+    }
+    .contacts{
+      order: 5;
+    }
+  }
