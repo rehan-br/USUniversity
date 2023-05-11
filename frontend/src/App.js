@@ -18,12 +18,12 @@ import VisaForStudy from './pages/VisaForStudy/visaforstudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 import Germany from './pages/VisaForStudy/Germany';
-<<<<<<< HEAD
 import England from './pages/VisaForStudy/England';
 import Japan from './pages/VisaForStudy/Japan';
 import University from './pages/University/University';
 import torontoUni from './assets/University/torontoUni.png';
 import torontoUniLogo from './assets/University/torontoUniLogo.png';
+import About from './pages/About/About';
 
 const torontoUniversity = {
   name: 'Toronto University',
@@ -114,11 +114,6 @@ const torontoUniversity = {
   ],
 };
 
-=======
-import  England from './pages/VisaForStudy/England';
-import  Japan from './pages/VisaForStudy/Japan';
-import About from './pages/About/About';
->>>>>>> d5a89fba375fae0d284fbef880685736dc425f7b
 function App() {
   return (
     <BrowserRouter>
@@ -150,7 +145,6 @@ function App() {
           <Route path="/germany" element={<Germany />}></Route>
           <Route path="/england" element={<England />}></Route>
           <Route path="/japan" element={<Japan />}></Route>
-<<<<<<< HEAD
 
           <Route
             path="/visaforstudy/canada/torontouniversity"
@@ -162,9 +156,8 @@ function App() {
               />
             }
           ></Route>
-=======
-          <Route  path="/about" element={<About />}></Route>
->>>>>>> d5a89fba375fae0d284fbef880685736dc425f7b
+
+          <Route path="/about" element={<About />}></Route>
         </Routes>
       </main>
       <footer>
