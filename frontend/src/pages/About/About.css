@@ -162,24 +162,34 @@
     font-weight: bold;
 }
 @media only screen and (max-width: 375px) {
+    .contact p{
+        font-size: 12px;
+    }
     .about {
     margin: 50px 20px;
     font-size: 16px;
     text-align: center;
     border-radius: 0;
+    flex-direction: column;
+    }
+    .about-left img {
+        width: 100%;
     }
     .about-right {
     margin: 0 20px;
     font-size: 16px;
-    text-align: center;
+    text-align: start;
     border-radius: 0;
-    flex-direction: row;
+    flex-direction: column;
     }
     .about p {
+        font-size: 12px;
     margin-top: -20px;
     }
     .about h2 {
-    margin: 0 20px;
+        font-size: 15px;
+    margin-left: 0 ;
+    margin-bottom: 10px;
     }
     .about h3 {
     margin-top: -5px;
@@ -190,8 +200,16 @@
     text-align: center;
     border-radius: 0;
     height: auto;
+    flex-direction: column;
+    display: flex;
+    
+    }
+    .mobileinfo{
+        display: flex;
+        gap: 10px;
     }
     .data-info {
+       
     height: auto;
     width: 100%;
     margin-top: 20px;
@@ -200,9 +218,7 @@
     height: 40px;
     width: 40px;
     }
-    .info-img {
-    display: none;
-    }
+    
     .datas {
     margin-top: 20px;
     }

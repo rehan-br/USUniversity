@@ -164,6 +164,9 @@ function App() {
           <Route path="/about" element={<About />}></Route>
         </Routes>
       </main>
+      <footer>
+        <Footer></Footer> 
+      </footer>
       
     </BrowserRouter>
   );
