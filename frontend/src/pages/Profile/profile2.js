@@ -12,9 +12,18 @@ import info from '../../assets/Profile/info.png';
 import upload from  '../../assets/Profile/upload.png';
 import notyet from '../../assets/Profile/notyet.png'
 import './profile.css'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axiox from 'axios';
 export default function Profile2() {
 
+  const [studentData, setStudentData] = useState([]);
+
+  useEffect(() => {
+    axiox.get('http://localhost:3001/student/getStudent').then((response) => {
+      setStudentData(response.data);
+      console.log(response.data);
+    })
+  }, []);
     const [selected, setSelected] = useState(null);
 
     function handleCheckboxChange(event) {
@@ -44,7 +53,7 @@ export default function Profile2() {
             <div className="pic-div">
                 <div className='profilepic'>
                   <img  src={profilephoto} alt=''></img>
-                  <h3>Shahbaz Ahmed</h3>
+                  <h3>{studentData[1].name}</h3>
                      <div className='namediv'>
                      
                       <p>ID: 12345678</p>
@@ -86,22 +95,22 @@ export default function Profile2() {
                         <br></br>
                           <div className='inputsdata'>
                             <div className='inputone'>  
-                            <p>Name</p>
+                            <p>{studentData[1].name}</p>
                              <input   disabled={isEditable ? false : true}   type="text" placeholder='Budi' />
                             </div>
                             <div className='inputone'>
-                            <p>Email</p>
+                            <p>{studentData[1].email}</p>
                              <input disabled={isEditable ? false : true} type="email" placeholder='budidoremi@gmail.com' />
                             </div>
                             
                           </div>
                           <div className='inputsdata'>
                             <div className='inputone'>
-                                 <p>Date of Birth</p>
+                                 <p>{studentData[1].dob}</p>
                                  <input  disabled={isEditable ? false : true} type="date" placeholder='15-03-2000'></input>
                             </div>
                               <div className='inputone'>
-                                 <p>Nationality</p>
+                                 <p>{studentData[1].nationality}</p>
                                  <input disabled={isEditable ? false : true} type='text' placeholder='USA'/>
                               </div>
                              
