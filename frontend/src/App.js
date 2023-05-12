@@ -14,7 +14,7 @@ import Rf4 from './pages/RegisterationForm/Rf4.js';
 import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
-import VisaForStudy from './pages/VisaForStudy/visaforstudy';
+import VisaForStudy from './pages/VisaForStudy/VisaForStudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 import Germany from './pages/VisaForStudy/Germany';
@@ -24,6 +24,8 @@ import University from './pages/University/University';
 import torontoUni from './assets/University/torontoUni.png';
 import torontoUniLogo from './assets/University/torontoUniLogo.png';
 import About from './pages/About/About';
+import MediaQuery from 'react-responsive';
+import MobileNav from './components/Navbar/MobileNav';
 
 const torontoUniversity = {
   name: 'Toronto University',
@@ -118,7 +120,9 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <Navbar></Navbar>
+        <MediaQuery minWidth={375}>
+          {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
+        </MediaQuery>
       </header>
       <main>
         <Routes>
