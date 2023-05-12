@@ -52,3 +52,32 @@
   background-color: #66d1ff;
   color: aliceblue;
 }
+@media only screen and (max-width: 375px) {
+  .footer-content {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .pages ul {
+    margin-left: 0;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .subscribe input {
+    width: 250px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    padding-left: 20px;
+  }
+
+  .subscribe button {
+    width: 20%;
+  }
+}

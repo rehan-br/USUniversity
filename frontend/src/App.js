@@ -14,7 +14,7 @@ import Rf4 from './pages/RegisterationForm/Rf4.js';
 import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
-import VisaForStudy from './pages/VisaForStudy/VisaForStudy';
+import VisaForStudy from './pages/VisaForStudy/visaforstudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 import Germany from './pages/VisaForStudy/Germany';
@@ -120,7 +120,7 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <MediaQuery minWidth={375}>
+        <MediaQuery minWidth={376}>
           {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
         </MediaQuery>
       </header>
@@ -164,9 +164,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
         </Routes>
       </main>
-      <footer>
-        <Footer></Footer>
-      </footer>
+      
     </BrowserRouter>
   );
 }

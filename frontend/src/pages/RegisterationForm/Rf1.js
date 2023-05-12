@@ -237,7 +237,7 @@ export default function Rf1({ handleFormData }) {
             <select
               disabled={isEditable ? false : true}
               className="selectskill"
-              style={{ width: '470px' }}
+              style={{ width: '300px' }}
               id="skill"
               name="skill"
               onChange={(event) => {
@@ -255,7 +255,7 @@ export default function Rf1({ handleFormData }) {
             <select
               disabled={isEditable ? false : true}
               className="selectskill"
-              style={{ width: '470px' }}
+              style={{ width: '300px' }}
               id="package"
               name="package"
               onChange={(event) => {

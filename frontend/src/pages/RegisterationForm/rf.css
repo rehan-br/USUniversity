@@ -181,3 +181,58 @@
   padding: 5px 10px 5px 10px;
   height: 35px;
 }
+@media only screen and (max-width: 375px) {
+  .top {
+  margin: 50px auto 0;
+  text-align: center;
+  }
+  .top h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  }
+  .formsection {
+  margin: 20px auto;
+  width: 80%;
+  }
+  .TB button {
+  width: 90px;
+  font-size: 12px;
+  margin-left: 5px;
+  }
+  .inputf {
+  flex-direction: column;
+  gap: 10px;
+  }
+  .nameinput input {
+  width: 90%;
+  }
+  .nation {
+  width: 100%;
+  }
+  .desire input {
+  width: 100%;
+  }
+  .gender {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  }
+  .savebt {
+  margin: 20px auto 0;
+  text-align: center;
+  }
+  .savebt button {
+  width: 120px;
+  font-size: 14px;
+  margin-left: 5px;
+  }
+  .page1image img{
+    width: 90%;
+  }
+  .page1img{
+  display: none;
+  }
+  .selectskill option{
+    width: 60%;
+  }
+  }

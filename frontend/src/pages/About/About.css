@@ -161,3 +161,99 @@
     color: #f7f7f7;
     font-weight: bold;
 }
+@media only screen and (max-width: 375px) {
+    .about {
+    margin: 50px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0;
+    }
+    .about-right {
+    margin: 0 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0;
+    flex-direction: row;
+    }
+    .about p {
+    margin-top: -20px;
+    }
+    .about h2 {
+    margin: 0 20px;
+    }
+    .about h3 {
+    margin-top: -5px;
+    }
+    .info {
+    margin: 50px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0;
+    height: auto;
+    }
+    .data-info {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    }
+    .data-info img {
+    height: 40px;
+    width: 40px;
+    }
+    .info-img {
+    display: none;
+    }
+    .datas {
+    margin-top: 20px;
+    }
+    .chooseus {
+    margin: 50px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0;
+    height: auto;
+    flex-direction: column;
+    }
+    .left-choose img {
+    height: auto;
+    width: 100%;
+    }
+    .right-choose {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    }
+    .right-choose h2 {
+    font-size: 24px;
+    }
+    .right-choose p {
+    font-size: 14px;
+    }
+    .tick img {
+    height: 16px;
+    width: 16px;
+    }
+    .tick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+    .tick p {
+    margin-top: -2px;
+    }
+    .teams {
+    margin-top: 50px;
+    margin-left: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    }
+    .teams img {
+    height: 120px;
+    width: 120px;
+    }
+    .teams p {
+    position: static;
+    margin-top: 10px;
+    margin-left: 0;
+    }
+    }
