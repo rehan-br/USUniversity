@@ -17,7 +17,7 @@
 .about-right{
     margin-left: 50px;
     margin-right: 100px;
-    margin-top: -50px;
+    margin-top: -90px;
 
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -26,17 +26,21 @@
     color: #000000;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     flex-direction: column;
     display: flex;
 }
 .about p{
     font-size: 16px;
+    margin-top: -27px;
 }
 .about h2{
-    margin-top: -10px;
+   
+    margin-right:50px ;
+    margin-top: -20px;
 }
 .about h3{
+   
     margin-top: -10px;
 }
 .info{
@@ -94,4 +98,66 @@
 
 .datas p{
     margin-top: -30px;
+}
+.chooseus{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    margin-right: 100px;
+    height: 450px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: #000000;
+    
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    
+}
+.left-choose img{
+    height: 389px;
+    width: 400px;
+    padding: 10px;
+}
+.right-choose{
+    margin-top: 10px;
+}
+.right-choose h2{
+    font-size: 30px;
+}
+.right-choose p{
+    font-size: 16px;
+}
+.tick img{
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+}
+.tick{
+    display: flex;
+    gap: 20px;
+}
+.tick p{
+    margin-top: -3px;
+}
+.teams{
+   margin-top: 90px;
+    margin-left: 200px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.teams img{
+    position:static;
+    
+    border-radius: 15px;
+}
+.teams p{
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 40px;
+    color: #f7f7f7;
+    font-weight: bold;
 }
