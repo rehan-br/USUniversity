@@ -9,6 +9,7 @@ import japan from '../../assets/Profile/japan.png';
 import { useState } from 'react';
 import './rf.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Rf1({ handleFormData }) {
   const [name, setname] = useState('');
@@ -19,24 +20,29 @@ export default function Rf1({ handleFormData }) {
   const [desiredschool, setdesiredschool] = useState('');
   const [englishskill, setenglishskill] = useState('');
   const [consultationpackage, setconsultationpackage] = useState('');
+  const [selected, setSelected] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleFormData({
-      rf1Data: {
-        name,
-        email,
-        dob,
-        Nationality,
-        gender,
-        desiredschool,
-        englishskill,
-        consultationpackage,
-      },
+
+    //Sending data with axios
+
+
+    axios.post('http://localhost:3001/student/createStudent', 
+      {
+        name: name,
+        email: email,
+        dob: dob,
+        nationality: Nationality,
+        gender: selected
+      }
+    ).then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
     });
   };
-
-  const [selected, setSelected] = useState(null);
 
   function handleCheckboxChange(event) {
     setSelected(event.target.value);
@@ -153,8 +159,8 @@ export default function Rf1({ handleFormData }) {
               <input
                 disabled={isEditable ? false : true}
                 type="checkbox"
-                value="option1"
-                checked={selected === 'option1'}
+                value="male"
+                checked={selected === 'male'}
                 onChange={handleCheckboxChange}
               />
               <p>Male</p>
@@ -163,8 +169,8 @@ export default function Rf1({ handleFormData }) {
               <input
                 disabled={isEditable ? false : true}
                 type="checkbox"
-                value="option2"
-                checked={selected === 'option2'}
+                value="female"
+                checked={selected === 'female'}
                 onChange={handleCheckboxChange}
               />
               <p> Female </p>
@@ -269,7 +275,7 @@ export default function Rf1({ handleFormData }) {
           </div>
 
           <div className="savebt">
-        <Link className='link' to ='/reg3'><button>Save & Next</button></Link>
+          <button onClick={handleSubmit}>Save & Next</button>
           </div>
         </div>
       </form>

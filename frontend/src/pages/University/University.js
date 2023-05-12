@@ -124,7 +124,14 @@ export default function University({ university, uniHeaderImage, uniLogo }) {
       </p>
 
       <section className="university-page-header">
-        <img src={uniHeaderImage} alt="university" />
+        <div className="university-page-header-imageContainer">
+          {/* <img
+            className="university-page-header-image"
+            src={uniHeaderImage}
+            alt="university"
+          /> */}
+        </div>
+
         <div className="uni-logo">
           <img src={uniLogo} alt="uniLogo" />
         </div>

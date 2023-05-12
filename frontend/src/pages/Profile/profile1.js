@@ -2,6 +2,8 @@ import raw from '../../assets/Profile/raw.png'
 import logout from '../../assets/Profile/logout.png'
 import './profile.css'
 export default function profile1() {
+
+
     return(
         <div className='profilemain'>
             <div className="pic-div">
