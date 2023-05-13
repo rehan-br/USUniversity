@@ -58,6 +58,7 @@ export default function About() {
         </div>
 
         <div className="info">
+          <div className="mobileinfo">
           <div className="data-info">
             <div className="info-img">
               <img src={student} alt=""></img>
@@ -68,6 +69,9 @@ export default function About() {
             </div>
           </div>
           <div className="data-info">
+            <div>
+              
+            </div>
             <div className="info-img">
               <img src={support} alt=""></img>
             </div>
@@ -76,6 +80,8 @@ export default function About() {
               <p>Total Consultants</p>
             </div>
           </div>
+          </div>
+          <div className="mobileinfo">
           <div className="data-info">
             <div className="info-img">
               <img src={elearning} alt=""></img>
@@ -94,6 +100,8 @@ export default function About() {
               <p>Countries</p>
             </div>
           </div>
+          </div>
+          
         </div>
 
         <div className="chooseus">

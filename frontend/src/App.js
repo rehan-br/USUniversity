@@ -120,7 +120,7 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <MediaQuery minWidth={375}>
+        <MediaQuery minWidth={376}>
           {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
         </MediaQuery>
       </header>
@@ -165,8 +165,9 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <Footer></Footer>
+        <Footer></Footer> 
       </footer>
+      
     </BrowserRouter>
   );
 }

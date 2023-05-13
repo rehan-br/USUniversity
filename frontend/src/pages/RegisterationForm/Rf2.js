@@ -188,7 +188,7 @@ export default function Rf2() {
                                  </div>
                                  <div  >
                                      <p for="skill">Your Desired Major</p>
-                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="skill" name="skill" onChange = {(event) => {setmajor(event.target.value)}}>
+                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="skill" name="skill" onChange = {(event) => {setmajor(event.target.value)}}>
                                      <option value=""></option>
                                      <option value="">option1</option>
                                      <option value="">option2</option>
@@ -197,7 +197,7 @@ export default function Rf2() {
                                  </div>
                                  <div  >
                                      <p for="skill">Desired Degree</p>
-                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="skill" name="skill" onChange = {(event) => {setdegree(event.target.value)}}>
+                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="skill" name="skill" onChange = {(event) => {setdegree(event.target.value)}}>
                                      <option value=""></option>
                                      <option value="">option1</option>
                                      <option value="">option2</option>
@@ -206,7 +206,7 @@ export default function Rf2() {
                                  </div>
                                  <div>
                                     <p>Ordered Consultation Package</p>
-                                    <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"470px"}} id="package" name="package" onChange = {(event) => {setconsultationpackage(event.target.value)}}>
+                                    <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="package" name="package" onChange = {(event) => {setconsultationpackage(event.target.value)}}>
                                      <option value="">--Please select your Ordered Consultation Pacakge--</option>
                                      <option value="ConsultationA">Consultation A</option>
                                      <option value="ConsultationB">Consultation B</option>
