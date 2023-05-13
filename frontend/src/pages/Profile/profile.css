@@ -288,3 +288,89 @@
     border: none;
     margin-left: 20px;
 }
+@media screen and (max-width: 375px) {
+
+    .profilemain {
+        flex-direction: column;
+    }
+
+    .pic-div {
+        margin: 50px 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .profilepic {
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .namediv {
+        margin: 0 auto;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .logout-button button,
+    .commonbutton {
+        width: 100%;
+    }
+
+    .twobuttons {
+        flex-direction: row;
+        margin-left: 20px;
+        
+    }
+    .twobuttons button{
+        margin-left: 10px;
+        height: auto;
+        font-size: 14px;
+    }
+    
+    .logout-button{
+        display: none;
+    }
+    
+
+    .dataentry {
+        margin-top: 50px;
+    }
+
+    .personaldata,
+    .password {
+        margin-left: 40px;
+        height: auto;
+        width: 85%;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    
+
+    .personaldata p,
+    .password p {
+        margin-bottom: 10px;
+    }
+
+    .personaldata input,
+    .password input {
+        width: 100%;
+    }
+
+    .personaldata button,
+    .password button {
+        width: 100%;
+    }
+
+    .inputsdata {
+        flex-direction: column;
+    }
+
+    .inputone input {
+        width: 100%;
+    }
+    .inputs-right button{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 30%;
+    }
+}
