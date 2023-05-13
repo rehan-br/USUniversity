@@ -31,7 +31,7 @@ export default function Service() {
             popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages.
           </p>
-          <Link to="/service/details">
+          <Link className="service-link" to="/service/details">
             <button className="service-section-content-btn">
               <span>Read More</span>
               <span>
@@ -42,7 +42,7 @@ export default function Service() {
         </div>
       </section>
 
-      <section className="service-section">
+      <section className="service-section second-service">
         <div className="service-section-content">
           <h1 className="service-section-content-heading">Consulting B</h1>
           <p className="service-section-content-para">
@@ -56,13 +56,13 @@ export default function Service() {
             popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages.
           </p>
-          <Link to="/service/details">
-          <button className="service-section-content-btn">
-            Read More
-            <span>
-              <i class="bx bx-right-arrow-circle"></i>
-            </span>
-          </button>
+          <Link className="service-link" to="/service/details">
+            <button className="service-section-content-btn">
+              Read More
+              <span>
+                <i class="bx bx-right-arrow-circle"></i>
+              </span>
+            </button>
           </Link>
         </div>
         <div className="service-section-img">
@@ -87,13 +87,13 @@ export default function Service() {
             popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages.
           </p>
-          <Link to="/service/details">
-          <button className="service-section-content-btn">
-            Read More
-            <span>
-              <i class="bx bx-right-arrow-circle"></i>
-            </span>
-          </button>
+          <Link className="service-link" to="/service/details">
+            <button className="service-section-content-btn">
+              Read More
+              <span>
+                <i class="bx bx-right-arrow-circle"></i>
+              </span>
+            </button>
           </Link>
         </div>
       </section>

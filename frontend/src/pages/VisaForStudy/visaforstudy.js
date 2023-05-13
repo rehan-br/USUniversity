@@ -107,7 +107,7 @@ export default function VisaForStudy() {
               <i class="bx bx-right-arrow-circle"></i> Consult with Experts
             </p>
           </div>
-          <Link className="link" to="">
+          <Link className="link applyOnline-btn-container" to="">
             <button className="applyOnline-btn">
               Apply Online <i class="bx bx-right-arrow-circle"></i>
             </button>

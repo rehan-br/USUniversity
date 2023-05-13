@@ -45,8 +45,8 @@
 .service-section-content-btn {
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   gap: 10px;
   font-weight: 400;
@@ -63,6 +63,53 @@
   color: #fff;
 }
 
+.service-link {
+  text-decoration: none;
+}
+
 .blue {
   color: #66d1ff;
+}
+
+@media screen and (max-width: 375px) {
+  .service-mainHeading {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
+  .service-subHeading {
+    font-size: 8px;
+    line-height: 12px;
+  }
+
+  .service-section {
+    flex-direction: column-reverse;
+  }
+
+  .second-service {
+    flex-direction: column;
+  }
+
+  .service-section-img img {
+    width: 310px;
+    height: 223px;
+  }
+
+  .service-section-content-btn {
+    width: 137px;
+    height: 37px;
+    font-size: 9px;
+    line-height: 13.5px;
+    gap: 5px;
+  }
+
+  .service-section-content-heading {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+
+  .service-section-content-para {
+    font-size: 9px;
+    line-height: 11.7px;
+  }
 }

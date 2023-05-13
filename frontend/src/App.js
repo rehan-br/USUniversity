@@ -26,6 +26,7 @@ import torontoUniLogo from './assets/University/torontoUniLogo.png';
 import About from './pages/About/About';
 import MediaQuery from 'react-responsive';
 import MobileNav from './components/Navbar/MobileNav';
+import torontoUniMob from './assets/University/torontoUni-mobile.png';
 
 const torontoUniversity = {
   name: 'Toronto University',
@@ -120,7 +121,7 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <MediaQuery minWidth={375}>
+        <MediaQuery minWidth={376}>
           {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
         </MediaQuery>
       </header>
@@ -157,6 +158,7 @@ function App() {
                 university={torontoUniversity}
                 uniHeaderImage={torontoUni}
                 uniLogo={torontoUniLogo}
+                uniHeaderMobileImg={torontoUniMob}
               />
             }
           ></Route>
@@ -164,9 +166,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
         </Routes>
       </main>
-      <footer>
-        <Footer></Footer>
-      </footer>
+      <footer>{/* <Footer></Footer> */}</footer>
     </BrowserRouter>
   );
 }

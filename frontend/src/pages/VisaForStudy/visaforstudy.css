@@ -186,3 +186,120 @@
   border: 1px solid #312259;
   color: #312259;
 }
+
+@media only screen and (max-width: 375px) {
+  .mainHeading {
+    font-size: 25px;
+    line-height: 32.5px;
+    margin-top: 71px;
+  }
+
+  .subHeading {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .mainSection {
+    flex-direction: column-reverse;
+  }
+
+  .mainSection img {
+    width: 336px;
+    height: 225px;
+    overflow: hidden;
+  }
+
+  .mainSection-content h1 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+
+  .mainSection-content-topHeading {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .mainSection-content .desc {
+    font-size: 9px;
+    line-height: 11.7px;
+  }
+
+  .studyVisaSection-mainHeading {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+
+  .studyVisaSection-subHeading {
+    font-size: 9px;
+    line-height: 11.7px;
+  }
+
+  .studyVisaSection-btnContainer-btn img {
+    height: 34.84px;
+    width: 34.84px;
+  }
+
+  .studyVisaSection-btnContainer-btn {
+    width: 164px;
+    height: 43.5px;
+    padding: 4px 13px 4px 13px;
+    border-radius: 5px;
+    gap: 8px;
+  }
+
+  .studyVisaSection-btnContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .studyVisaSection-btnContainer-btn {
+    box-sizing: border-box;
+  }
+
+  .studyVisaSection-btnContainer-btn span {
+    font-size: 9px;
+    line-height: 11.7px;
+  }
+
+  .studyForVisa-lastSection {
+    flex-direction: column;
+  }
+
+  .studyForVisa-lastSection-subHeading {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .studyForVisa-lastSection-mainHeading {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+
+  .studyForVisa-lastSection-desc {
+    font-size: 9px;
+    line-height: 11.7px;
+  }
+
+  .step {
+    font-size: 9px;
+    line-height: 11.7px;
+  }
+
+  .applyOnline-btn {
+    width: 130px;
+    height: 37px;
+    font-size: 9px;
+    line-height: 13.7px;
+    text-align: center;
+  }
+
+  .applyOnline-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lastSection-img img {
+    width: 336px;
+    height: 225px;
+  }
+}
