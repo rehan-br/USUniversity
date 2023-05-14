@@ -20,6 +20,9 @@ export default function Footer() {
           <img src={instagram} alt="instagram" />
         </div>
       </div>
+      <div className='threecontents'> 
+
+      
       <div className="footer-content pages">
         <h2>Pages</h2>
         <ul>
@@ -74,6 +77,7 @@ export default function Footer() {
             <a>Visa Student</a>
           </li>
         </ul>
+      </div>
       </div>
       <div className="footer-content">
         <h2>Don't Miss Out!</h2>

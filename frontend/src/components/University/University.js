@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './university.css';
 export default function University({ university }) {
   return (
@@ -8,7 +9,7 @@ export default function University({ university }) {
         {university.map((uni) => {
           return (
             <div className="uni">
-              <h1 className="uni-name">{uni}</h1>
+             <Link lassName="link" to="/visaforstudy/canada/torontouniversity"> <h1 className="uni-name">{uni}</h1></Link>
             </div>
           );
         })}

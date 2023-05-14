@@ -20,8 +20,14 @@ import location from '../../assets/University/location.png';
 import Comment from '../../components/Comment/Comment';
 import commentImg from '../../assets/VisaForStudy/comment.png';
 import otherUni from '../../assets/University/otherUni.png';
+import MediaQuery from 'react-responsive';
 
-export default function University({ university, uniHeaderImage, uniLogo }) {
+export default function University({
+  university,
+  uniHeaderImage,
+  uniLogo,
+  uniHeaderMobileImg,
+}) {
   const [activeBtn, setActiveBtn] = useState('article');
 
   const handleActiveBtn = (button) => {
@@ -124,7 +130,22 @@ export default function University({ university, uniHeaderImage, uniLogo }) {
       </p>
 
       <section className="university-page-header">
-        <img src={uniHeaderImage} alt="university" />
+        <div className="university-page-header-imageContainer">
+          <MediaQuery minWidth={376}>
+            {(matches) =>
+              matches ? (
+                <img
+                  className="university-page-header-image"
+                  src={uniHeaderImage}
+                  alt="university"
+                />
+              ) : (
+                <img src={uniHeaderMobileImg} alt="uni"></img>
+              )
+            }
+          </MediaQuery>
+        </div>
+
         <div className="uni-logo">
           <img src={uniLogo} alt="uniLogo" />
         </div>

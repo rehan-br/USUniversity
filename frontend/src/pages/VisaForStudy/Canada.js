@@ -213,7 +213,7 @@ export default function Canada() {
         {comments.slice(0, showMore ? comments.length : 3).map((comment) => (
           <Comment comment={comment} imageSource={commentImg}></Comment>
         ))}
-        <div>
+        <div className="showMoreBtn-containerDiv">
           <button className="showMoreBtn" onClick={handleShowMore}>
             {showMore ? 'Show less' : 'Show more'}
           </button>
