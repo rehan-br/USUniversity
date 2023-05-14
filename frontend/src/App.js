@@ -14,7 +14,7 @@ import Rf4 from './pages/RegisterationForm/Rf4.js';
 import Service from './pages/Service/Service.js';
 import BlogPage from './pages/Individual Blog/blogpage.js';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail.js';
-import VisaForStudy from './pages/VisaForStudy/VisaForStudy';
+import VisaForStudy from './pages/VisaForStudy/visaforstudy';
 import Usa from './pages/VisaForStudy/Usa.js';
 import Canada from './pages/VisaForStudy/Canada';
 import Germany from './pages/VisaForStudy/Germany';
@@ -27,6 +27,8 @@ import About from './pages/About/About';
 import MediaQuery from 'react-responsive';
 import MobileNav from './components/Navbar/MobileNav';
 import torontoUniMob from './assets/University/torontoUni-mobile.png';
+import Sidebar from './components/Sidebar/Sidebar';
+
 
 const torontoUniversity = {
   name: 'Toronto University',
@@ -142,6 +144,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />}></Route>
           <Route path="/service/details" element={<ServiceDetail />}></Route>
+          {/* <Route path='sidebar' element={<Sidebar/>}></Route> */}
+          
 
           <Route path="/blogpagetest" element={<BlogPage />}></Route>
           <Route path="/country" element={<VisaForStudy />}></Route>
@@ -164,6 +168,10 @@ function App() {
           ></Route>
 
           <Route path="/about" element={<About />}></Route>
+
+
+
+
         </Routes>
       </main>
       <footer>

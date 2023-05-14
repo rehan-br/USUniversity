@@ -1,0 +1,53 @@
+.sidebarTitle{
+    margin-left: 86.5px;
+    margin-top: 27px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #312259;
+    line-height: 46px;
+
+}
+.fc{
+    display: flex;
+    gap: 3px;
+    
+    
+}
+.sidebarListItem{
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    line-height: 20px;
+    font-size: 16px;
+
+}
+.sideimg{
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+   
+    
+}
+.endbtn{
+    box-sizing: border-box;
+    margin-left: -11px;
+    margin-top: 350px;
+    font-size: 36px;
+    line-height: 20px;
+    width: 212px;
+    height: 46px;
+    background-color: #f5f3f3;
+    border-radius: 10px;
+    border: 1px solid #312259;
+    outline-color: #312259;
+    border: #312259;
+    padding: 10px 20px 10px 20px;
+    color: #312259;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
