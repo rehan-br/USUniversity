@@ -41,13 +41,6 @@ exports.createStudentProfile = async (req, res) => {
 }
 
 //Get Student Profile
-exports.getStudentProfile = async (req, res) => {
-
-    StudentModel.find({}, (err, result) => {
-        if (err) {
-            res.send(err);
-        }
-
-        res.send(result);
-    });
-}
+exports.getStudentProfile((req, res) => {
+    
+})
