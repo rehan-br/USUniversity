@@ -125,11 +125,11 @@ const torontoUniversity = {
 function App() {
   return (
     <BrowserRouter>
-      {/* <header>
+      <header>
         <MediaQuery minWidth={375}>
           {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
         </MediaQuery>
-      </header> */}
+      </header>
 
       {/* <Sidebar2></Sidebar2> */}
       <main>
@@ -180,9 +180,9 @@ function App() {
           ></Route>
         </Routes>
       </main>
-      {/* <footer>
+      <footer>
         <Footer></Footer>
-      </footer> */}
+      </footer>
     </BrowserRouter>
   );
 }

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footer-content">
-        <h2>Our Content</h2>
+        <h2>Our Contact</h2>
         <p>
           Address: Lorem pipsum is simply sum dummy text of the printing and
           typesetting industry

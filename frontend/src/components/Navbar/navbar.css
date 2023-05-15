@@ -193,3 +193,45 @@ Nav p {
   font-weight: 700;
 }
 
+@media screen and (max-width: 375px) {
+  .login-container {
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  border-radius: 0;
+  }
+  
+  .leftimg {
+  width: 100%;
+  height: auto;
+  }
+  
+  .lf {
+  margin: 40px 20px;
+  }
+  
+  .inpemail,
+  .inpemailsign,
+  .lobtn,
+  .signbtn {
+  width: 100%;
+  margin: 10px 0 20px 0;
+  }
+  
+  .fp {
+  margin-left: 200px;
+  }
+  
+  .closetag {
+  margin-left: 270px;
+  margin-top: -70px;
+  }
+  
+  .center {
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  line-height: 45px;
+  }
+  }

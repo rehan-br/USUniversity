@@ -17,6 +17,9 @@ import section62 from '../../assets/Homepage/section6-2.png';
 import section63 from '../../assets/Homepage/section6-3.png';
 import section64 from '../../assets/Homepage/section6-4.png';
 import section65 from '../../assets/Homepage/section6-5.png';
+import groupmen from '../../assets/Homepage/groupmen.png'
+import calicon from '../../assets/BlogPage/cal-icon.png'
+import arrow from '../../assets/BlogPage/arrow.png'
 import { Link } from 'react-router-dom';
 import './home.css';
 import Testimonial from '../../components/Testimonial/Testimonial';
@@ -117,7 +120,7 @@ export default function Home() {
             <button>Apply Online</button>
           </Link>
         </div>
-        <div>
+        <div className="happy">
           <img src={aboutImage} alt=""></img>
         </div>
       </section>
@@ -133,6 +136,9 @@ export default function Home() {
           industry. Lorem Ipsum has been the industry's
         </p>
         <div className="flag-cards">
+          <div className='flagmobile'>
+
+          
           <div className="flag-card">
             <img src={usa} alt="flag"></img>
             <h2>USA</h2>
@@ -145,6 +151,9 @@ export default function Home() {
             <img src={japan} alt="flag"></img>
             <h2>Japan</h2>
           </div>
+          </div>
+          <div className='flagmobile'>
+            
           <div className="flag-card">
             <img src={canada} alt="flag"></img>
             <h2>Canada</h2>
@@ -152,6 +161,7 @@ export default function Home() {
           <div className="flag-card">
             <img src={england} alt="flag"></img>
             <h2>England</h2>
+          </div>
           </div>
         </div>
         <Link className='link' to='./reg'><button className="applyOnlineBtn">Apply Online</button></Link>
@@ -297,6 +307,9 @@ export default function Home() {
           industry. Lorem Ipsum has been the industry's
         </p>
         <div className="step-cards">
+          <div className='mediaimg'>
+
+          
           <div className="step-card">
             <img src={section61} alt="img"></img>
             <h2>Select Consultation Package</h2>
@@ -309,6 +322,10 @@ export default function Home() {
             <img src={section63} alt="img"></img>
             <h2>Make Payment</h2>
           </div>
+          </div>
+          <div className='mediaimg'>
+
+          
           <div className="step-card">
             <img src={section64} alt="img"></img>
             <h2>Start Consulting With Experts</h2>
@@ -317,9 +334,11 @@ export default function Home() {
             <img src={section65} alt="img"></img>
             <h2>We Will Register You To Your University</h2>
           </div>
+          </div>
         </div>
       </section>
-
+     
+{/* 
       <section className="section section7">
         <h4 className="section-subheading">Testimonials</h4>
         <h1 className="section-heading">
@@ -332,7 +351,8 @@ export default function Home() {
           <Testimonial></Testimonial>
           <Testimonial></Testimonial>
         </div>
-      </section>
+      </section> */}
+      
     </div>
   );
 }
