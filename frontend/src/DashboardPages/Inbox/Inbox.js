@@ -54,31 +54,31 @@ export default function Inbox() {
         </div>
 
         <div className='inboxperson'>
-            <img classNmae='pimgg' src={personimg} alt=''></img>
+            <img className='pimgg' src={personimg} alt=''></img>
             <p onClick={showmsgbox}>Budi Doremi</p>
             {/* <img className='notimg' src={noti}></img> */}
         </div>
 
         <div className='inboxperson'>
-            <img classNmae='pimgg' src={personimg} alt=''></img>
+            <img className='pimgg' src={personimg} alt=''></img>
             <p onClick={showmsgbox}>Budi Doremi</p>
             {/* <img className='notimg' src={noti}></img> */}
         </div>
 
         <div className='inboxperson'>
-            <img classNmae='pimgg' src={personimg} alt=''></img>
+            <img className='pimgg' src={personimg} alt=''></img>
             <p onClick={showmsgbox}>Budi Doremi</p>
             {/* <img className='notimg' src={noti}></img> */}
         </div>
 
         <div className='inboxperson'>
-            <img classNmae='pimgg' src={personimg} alt=''></img>
+            <img className='pimgg' src={personimg} alt=''></img>
             <p onClick={showmsgbox}>Budi Doremi</p>
             {/* <img className='notimg' src={noti}></img> */}
         </div>
 
         <div className='inboxperson'>
-            <img classNmae='pimgg' src={personimg} alt=''></img>
+            <img className='pimgg' src={personimg} alt=''></img>
             <p onClick={showmsgbox}>Budi Doremi</p>
             {/* <img className='notimg' src={noti}></img> */}
         </div>

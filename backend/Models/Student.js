@@ -3,12 +3,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
-    rollNumber: {
-        type: String,
-        required: true,
-        unique: true
-    },
-
     //Personal Information
     name: {
         type: String,
@@ -26,6 +20,10 @@ const studentSchema = new Schema({
         type: Date,
         required: true
     },
+    gender: {
+        type: String,
+        required: true
+    },
 
     //Contact Information
     email: {
@@ -39,6 +37,11 @@ const studentSchema = new Schema({
         unique: true
     },
     address: {
+        type: String,
+        required: true
+    },
+
+    nationality: {
         type: String,
         required: true
     },

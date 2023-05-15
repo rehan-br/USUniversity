@@ -17,14 +17,15 @@ import axiox from 'axios';
 export default function Profile2() {
 
   const [studentData, setStudentData] = useState([]);
-
-  useEffect(() => {
-    axiox.get('http://localhost:3001/student/getStudent').then((response) => {
-      setStudentData(response.data);
-      console.log(response.data);
-    })
-  }, []);
     const [selected, setSelected] = useState(null);
+
+
+    useEffect(() => {
+      
+     axiox.get('http://localhost:3001/student/getStudent').then((response) => {
+            setStudentData(response.data.data.student);
+        })
+    }, []);
 
     function handleCheckboxChange(event) {
       setSelected(event.target.value);
@@ -53,7 +54,7 @@ export default function Profile2() {
             <div className="pic-div">
                 <div className='profilepic'>
                   <img  src={profilephoto} alt=''></img>
-                  <h3>{studentData[1].name}</h3>
+                  <h3>{studentData[1].student.name}</h3>
                      <div className='namediv'>
                      
                       <p>ID: 12345678</p>
