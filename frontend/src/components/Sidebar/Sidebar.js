@@ -41,7 +41,7 @@ export default function Sidebar() {
                             </li>
                             </div>
                         </Link>
-                        <Link to="/contact" className="link">
+                        <Link to="/inbox" className="link">
                         <div className="fc">
                         <img className="sideimg" src={inbox}></img>
                             <li className="sidebarListItem">
