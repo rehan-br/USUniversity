@@ -27,6 +27,11 @@ import About from './pages/About/About';
 import MediaQuery from 'react-responsive';
 import MobileNav from './components/Navbar/MobileNav';
 import torontoUniMob from './assets/University/torontoUni-mobile.png';
+import Dashboard from './DashboardPages/Dashboard/Dashboard';
+import Schedule from './DashboardPages/Schedule/Schedule';
+import Notification from './DashboardPages/Notification/Notification';
+import User from './DashboardPages/User/User';
+import Inbox from './DashboardPages/Inbox/Inbox';
 
 const torontoUniversity = {
   name: 'Toronto University',
@@ -120,29 +125,40 @@ const torontoUniversity = {
 function App() {
   return (
     <BrowserRouter>
-      <header>
+      {/* <header>
         <MediaQuery minWidth={375}>
           {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
         </MediaQuery>
-      </header>
+      </header> */}
+
+      {/* <Sidebar2></Sidebar2> */}
       <main>
         <Routes>
+          {/*Dashboard Testing Page Routes */}
+          <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+          <Route path="/schedule" element={<Schedule></Schedule>}></Route>
+          <Route path="/user" element={<User></User>}></Route>
+          <Route path="/inbox" element={<Inbox></Inbox>}></Route>
+          <Route
+            path="/notification"
+            element={<Notification></Notification>}
+          ></Route>
+
+          {/* Dashboard Testing Page Routes */}
+
           <Route path="/" element={<Home />}></Route>
-
           <Route path="/blog" element={<Blog />}></Route>
-
           <Route path="/profile1" element={<Profile1 />}></Route>
           <Route path="/profile" element={<Profile2 />}></Route>
           <Route path="/reg" element={<Rf1 />}></Route>
           <Route path="/reg2" element={<Rf2 />}></Route>
           <Route path="/reg3" element={<Rf3 />}></Route>
           <Route path="/reg4" element={<Rf4 />}></Route>
-
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />}></Route>
           <Route path="/service/details" element={<ServiceDetail />}></Route>
-
+          {/* <Route path='sidebar' element={<Sidebar/>}></Route> */}
           <Route path="/blogpagetest" element={<BlogPage />}></Route>
           <Route path="/country" element={<VisaForStudy />}></Route>
           <Route path="/canada" element={<Canada />}></Route>
@@ -150,7 +166,7 @@ function App() {
           <Route path="/germany" element={<Germany />}></Route>
           <Route path="/england" element={<England />}></Route>
           <Route path="/japan" element={<Japan />}></Route>
-
+          <Route path="/about" element={<About />}></Route>
           <Route
             path="/visaforstudy/canada/torontouniversity"
             element={
@@ -162,13 +178,11 @@ function App() {
               />
             }
           ></Route>
-
-          <Route path="/about" element={<About />}></Route>
         </Routes>
       </main>
-      <footer>
+      {/* <footer>
         <Footer></Footer>
-      </footer>
+      </footer> */}
     </BrowserRouter>
   );
 }
