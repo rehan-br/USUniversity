@@ -10,6 +10,12 @@ import question from '../../assets/Login/question.png';
 import { useState } from 'react';
 
 export default function Sidebar() {
+  const [showLogout, setShowLogout] = useState(false);
+
+  const handleLogout = () => {
+    setShowLogout(!showLogout);
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -47,10 +53,30 @@ export default function Sidebar() {
                 <li className="sidebarListItem">Notification</li>
               </div>
             </Link>
-            <button className="endbtn">Log Out</button>
+            <button className="endbtn" onClick={handleLogout}>
+              Log Out
+            </button>
           </ul>
         </div>
       </div>
+      {showLogout && (
+        <div className="logout-div">
+          <div className="logout-container">
+            <h2 className="lo">Log Out</h2>
+            <img className="question" src={question}></img>
+            <p className="ptagg">Are you sure to Log out?</p>
+          </div>
+
+          <div className="logout-btn">
+            <Link className="link" to="/">
+              <button className="logout-btn1">Yes</button>
+            </Link>
+            <button className="logout-btn1" onClick={handleLogout}>
+              Back
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
