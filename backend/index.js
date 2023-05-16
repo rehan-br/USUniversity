@@ -22,8 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 const studentRouter = require('./Routes/StudentRoute');
+const userRouter = require('./Routes/PersonalData');
 
 app.use('/student', studentRouter);
+app.use('/user', userRouter);
 
 app.listen(port, () => {
     console.log('Listening on port ' + port);
