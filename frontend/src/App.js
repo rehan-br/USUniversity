@@ -32,7 +32,7 @@ import Schedule from './DashboardPages/Schedule/Schedule';
 import Notification from './DashboardPages/Notification/Notification';
 import User from './DashboardPages/User/User';
 import Inbox from './DashboardPages/Inbox/Inbox';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import loginScreenImage from './assets/loginScreenImage.png';
 import { Link, useNavigate } from 'react-router-dom';
@@ -128,11 +128,42 @@ const torontoUniversity = {
 function App() {
   const [userRole, setUserRole] = useState('');
   const [state, setState] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [data, setData] = useState([]);
   // const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('http://localhost:3001/user/getAll')
+    .then((res) => res.json())
+    .then((data) => {console.log(data); setData(data)})
+    .catch((err) => console.log(err));
+  }, []);
+
+
   const handleAdminRole = () => {
     setUserRole('admin');
     setState(true);
+
+    fetch("http://localhost:3001/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      })
+      .then((res) => {
+        if(res.status === 200){
+          const token = res.headers.get("x-auth-token");
+          return;
+        }
+      })
+      .catch((err) => console.log(err));
   };
+
   const handleUserRole = () => {
     setUserRole('user');
     setState(true);
@@ -150,14 +181,13 @@ function App() {
         <div className="loginScreenContent">
           <h1>LOGO</h1>
           <h3>Login as Admin</h3>
-          <input type="text" placeholder="Admin ID"></input>
-          <input type="password" placeholder="Password"></input>
+          <input type="text" onChange={(e) => setEmail(e.target.value)} placeholder="Admin ID"></input>
+          <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
           <Link
             className="loginButton"
             to="/dashboard"
             onClick={() => {
               handleAdminRole();
-              // navigate('/dashboard');
             }}
           >
             <button>Login</button>

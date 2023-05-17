@@ -338,7 +338,7 @@ export default function Home() {
         </div>
       </section>
      
-{/* 
+
       <section className="section section7">
         <h4 className="section-subheading">Testimonials</h4>
         <h1 className="section-heading">
@@ -351,7 +351,7 @@ export default function Home() {
           <Testimonial></Testimonial>
           <Testimonial></Testimonial>
         </div>
-      </section> */}
+      </section>
       
     </div>
   );

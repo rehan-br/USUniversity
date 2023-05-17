@@ -6,11 +6,34 @@ import serviceB from '../../assets/MobileNav/serviceB.png';
 import serviceC from '../../assets/MobileNav/serviceC.png';
 import visaforstudy from '../../assets/MobileNav/visaforstudy.png';
 import destinationforstudy from '../../assets/MobileNav/destinationforstudy.png';
+import loginimg from "../../assets/Login/loginimg.png";
+import close from "../../assets/Login/Close.png";
 export default function MobileNav() {
   const [showMenu, setShowMenu] = useState(false);
   const [showService, setShowService] = useState(false);
   const [showCountry, setShowCountry] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
 
+  const handleLogin = () => {
+    setShowLogin(!showLogin);
+  };
+
+  const handleSignup = () => {
+    setShowSignup(!showSignup);
+  };
+
+  if(showLogin) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+
+  if(showSignup) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
   const handleShowCountry = () => {
     setShowCountry(!showCountry);
   };
@@ -118,6 +141,65 @@ export default function MobileNav() {
               <i onClick={handleShowCountry} class="bx bx-chevron-up"></i>
             )}
           </div>
+          {showLogin && (
+        <div className="login-div">
+          <div className="login-container">
+            <div className='leftimg'>
+              
+              <img  src={loginimg}></img>
+              <div className='center'>Welcome</div>
+             
+              
+            </div>
+            <div className="lf">
+              <form>
+                <img className='closetag' src={close} onClick={handleLogin}/>
+
+              <h1>Login</h1>
+              
+              <input className='inpemail' type="text" placeholder="Email Address" />
+              <input className='inpemail' type="password" placeholder="Password" />
+              <p className='fp'>Forgot Password?</p>
+              <button className='lobtn'>Login</button>
+              <p className=''>Don't have an account yet? <span  className='scolor' onClick={handleSignup}>Sign Up</span></p>
+              </form>
+
+              </div>
+          </div>
+          
+        </div>
+      )}
+
+{showSignup && (
+        <div className="login-div">
+          <div className="login-container">
+            <div className='leftimg'>
+              
+              <img  src={loginimg}></img>
+              <div className='center'>Welcome</div>
+              
+            </div>
+            <div className="lf">
+              <form>
+                <img className='closetag' src={close} onClick={handleSignup}></img>
+
+              <h1>Sign Up</h1>
+              <p className='pline'>Create an Account</p>
+              <input className='inpemailsign' type="text" placeholder="First Name" />
+              <input className='inpemailsign' type="text" placeholder="Last Name" />
+              <input className='inpemailsign' type="text" placeholder="Email Address" />
+              <input className='inpemailsign' type="password" placeholder="Password" />
+              
+              <button className='signbtn'>Create Account</button>
+              <p className='lline'>Already have an account? <span  className='scolor' onClick={handleLogin}>Login</span></p>
+              </form>
+
+              </div>
+          </div>
+          
+        </div>
+      )}
+    
 
           {showCountry && (
             <div className="menu-services">
