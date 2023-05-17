@@ -32,7 +32,10 @@ import Schedule from './DashboardPages/Schedule/Schedule';
 import Notification from './DashboardPages/Notification/Notification';
 import User from './DashboardPages/User/User';
 import Inbox from './DashboardPages/Inbox/Inbox';
-
+import { useEffect, useState } from 'react';
+import Sidebar from './components/Sidebar/Sidebar';
+import loginScreenImage from './assets/loginScreenImage.png';
+import { Link, useNavigate } from 'react-router-dom';
 const torontoUniversity = {
   name: 'Toronto University',
   annualDromitory: '$30,000',
@@ -123,66 +126,158 @@ const torontoUniversity = {
 };
 
 function App() {
+  const [userRole, setUserRole] = useState('');
+  const [state, setState] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [data, setData] = useState([]);
+  // const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('http://localhost:3001/user/getAll')
+    .then((res) => res.json())
+    .then((data) => {console.log(data); setData(data)})
+    .catch((err) => console.log(err));
+  }, []);
+
+
+  const handleAdminRole = () => {
+    setUserRole('admin');
+    setState(true);
+
+    fetch("http://localhost:3001/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      })
+      .then((res) => {
+        if(res.status === 200){
+          const token = res.headers.get("x-auth-token");
+          return;
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const handleUserRole = () => {
+    setUserRole('user');
+    setState(true);
+  };
   return (
     <BrowserRouter>
-      <header>
-        <MediaQuery minWidth={375}>
-          {(matches) => (matches ? <Navbar></Navbar> : <MobileNav></MobileNav>)}
-        </MediaQuery>
-      </header>
+      {/* <div className="App"> */}
+      {/* <button onClick={handleAdminRole}>Admin</button>
+        <button onClick={handleUserRole}>User</button> */}
 
-      {/* <Sidebar2></Sidebar2> */}
-      <main>
-        <Routes>
-          {/*Dashboard Testing Page Routes */}
-          <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
-          <Route path="/schedule" element={<Schedule></Schedule>}></Route>
-          <Route path="/user" element={<User></User>}></Route>
-          <Route path="/inbox" element={<Inbox></Inbox>}></Route>
-          <Route
-            path="/notification"
-            element={<Notification></Notification>}
-          ></Route>
+      <div className={state ? 'loginScreenDisplay' : 'loginScreen'}>
+        <div className="loginScreenImage">
+          <img src={loginScreenImage} alt="login"></img>
+        </div>
+        <div className="loginScreenContent">
+          <h1>LOGO</h1>
+          <h3>Login as Admin</h3>
+          <input type="text" onChange={(e) => setEmail(e.target.value)} placeholder="Admin ID"></input>
+          <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
+          <Link
+            className="loginButton"
+            to="/dashboard"
+            onClick={() => {
+              handleAdminRole();
+            }}
+          >
+            <button>Login</button>
+          </Link>
 
-          {/* Dashboard Testing Page Routes */}
+          <Link
+            to="/home"
+            onClick={() => {
+              handleUserRole();
+              // navigate('/home');
+            }}
+            className="loginLink"
+          >
+            Continue as a user?
+          </Link>
+        </div>
+      </div>
 
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/blog" element={<Blog />}></Route>
-          <Route path="/profile1" element={<Profile1 />}></Route>
-          <Route path="/profile" element={<Profile2 />}></Route>
-          <Route path="/reg" element={<Rf1 />}></Route>
-          <Route path="/reg2" element={<Rf2 />}></Route>
-          <Route path="/reg3" element={<Rf3 />}></Route>
-          <Route path="/reg4" element={<Rf4 />}></Route>
-          <Route path="/blog" element={<Blog />}></Route>
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/service" element={<Service />}></Route>
-          <Route path="/service/details" element={<ServiceDetail />}></Route>
-          {/* <Route path='sidebar' element={<Sidebar/>}></Route> */}
-          <Route path="/blogpagetest" element={<BlogPage />}></Route>
-          <Route path="/country" element={<VisaForStudy />}></Route>
-          <Route path="/canada" element={<Canada />}></Route>
-          <Route path="/usa" element={<Usa />}></Route>
-          <Route path="/germany" element={<Germany />}></Route>
-          <Route path="/england" element={<England />}></Route>
-          <Route path="/japan" element={<Japan />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route
-            path="/visaforstudy/canada/torontouniversity"
-            element={
-              <University
-                university={torontoUniversity}
-                uniHeaderImage={torontoUni}
-                uniLogo={torontoUniLogo}
-                uniHeaderMobileImg={torontoUniMob}
-              />
-            }
-          ></Route>
-        </Routes>
-      </main>
-      <footer>
-        <Footer></Footer>
-      </footer>
+      {userRole === 'admin' && (
+        <div className="adminRoutes">
+          {console.log('Into admin Routes')}
+
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+            <Route path="/schedule" element={<Schedule></Schedule>}></Route>
+            <Route path="/user" element={<User></User>}></Route>
+            <Route path="/inbox" element={<Inbox></Inbox>}></Route>
+            <Route
+              path="/notification"
+              element={<Notification></Notification>}
+            ></Route>
+          </Routes>
+        </div>
+      )}
+
+      {userRole === 'user' && (
+        <div className="userRoutes">
+          {console.log('Into User Routes')}
+          <header>
+            <MediaQuery minWidth={376}>
+              {(matches) =>
+                matches ? <Navbar></Navbar> : <MobileNav></MobileNav>
+              }
+            </MediaQuery>
+          </header>
+          <main>
+            <Routes>
+              <Route path="/home" element={<Home />}></Route>
+              <Route path="/blog" element={<Blog />}></Route>
+              <Route path="/profile1" element={<Profile1 />}></Route>
+              <Route path="/profile" element={<Profile2 />}></Route>
+              <Route path="/reg" element={<Rf1 />}></Route>
+              <Route path="/reg2" element={<Rf2 />}></Route>
+              <Route path="/reg3" element={<Rf3 />}></Route>
+              <Route path="/reg4" element={<Rf4 />}></Route>
+              <Route path="/blog" element={<Blog />}></Route>
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/service" element={<Service />}></Route>
+              <Route
+                path="/service/details"
+                element={<ServiceDetail />}
+              ></Route>
+              {/* <Route path='sidebar' element={<Sidebar/>}></Route> */}
+              <Route path="/blogpagetest" element={<BlogPage />}></Route>
+              <Route path="/country" element={<VisaForStudy />}></Route>
+              <Route path="/canada" element={<Canada />}></Route>
+              <Route path="/usa" element={<Usa />}></Route>
+              <Route path="/germany" element={<Germany />}></Route>
+              <Route path="/england" element={<England />}></Route>
+              <Route path="/japan" element={<Japan />}></Route>
+              <Route path="/about" element={<About />}></Route>
+              <Route
+                path="/visaforstudy/canada/torontouniversity"
+                element={
+                  <University
+                    university={torontoUniversity}
+                    uniHeaderImage={torontoUni}
+                    uniLogo={torontoUniLogo}
+                    uniHeaderMobileImg={torontoUniMob}
+                  />
+                }
+              ></Route>
+            </Routes>
+          </main>
+          <footer>
+            <Footer></Footer>
+          </footer>
+        </div>
+      )}
+      {/* </div> */}
     </BrowserRouter>
   );
 }
