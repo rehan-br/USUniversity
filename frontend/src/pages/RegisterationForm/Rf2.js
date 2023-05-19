@@ -9,6 +9,7 @@ import japan from '../../assets/Profile/japan.png'
 import pic3 from '../../assets/Registrationform/pic3.png'
 import { useState } from "react";
 import './rf.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -68,7 +69,7 @@ export default function Rf2() {
                 <p>What State are you planning to apply for ?</p>
             </div>
             <div className="TB">
-                <button >School</button>
+              <Link className="link" to='/reg'><button >School</button></Link> 
                 <button >University</button>
                 <hr style={{marginTop:"30px"}}></hr>
              </div>   

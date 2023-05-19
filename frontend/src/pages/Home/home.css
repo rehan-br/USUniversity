@@ -499,5 +499,21 @@
   .sec1-btns{
     order: 3;
   }
-
+  .testimonials {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .testimonials::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .testimonial{
+    flex: 0 0 calc(100% / 2);
+    scroll-snap-align: start;
+    padding: 0 5px;
+  }
 }

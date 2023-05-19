@@ -139,29 +139,38 @@ export default function Home() {
           <div className='flagmobile'>
 
           
+          <Link className='link' to='/usa'>
           <div className="flag-card">
             <img src={usa} alt="flag"></img>
             <h2>USA</h2>
           </div>
+          </Link>
+          <Link className='link' to='/germany'>
           <div className="flag-card">
             <img src={germany} alt="flag"></img>
             <h2>Germany</h2>
           </div>
+          </Link>
+          <Link className='link' to='/japan'>
           <div className="flag-card">
             <img src={japan} alt="flag"></img>
             <h2>Japan</h2>
           </div>
+          </Link>
           </div>
           <div className='flagmobile'>
-            
+
+            <Link className='link' to='/canada'></Link>
           <div className="flag-card">
             <img src={canada} alt="flag"></img>
             <h2>Canada</h2>
           </div>
+          <Link className='link' to='/england'>
           <div className="flag-card">
             <img src={england} alt="flag"></img>
             <h2>England</h2>
           </div>
+          </Link>
           </div>
         </div>
         <Link className='link' to='./reg'><button className="applyOnlineBtn">Apply Online</button></Link>
@@ -338,7 +347,7 @@ export default function Home() {
         </div>
       </section>
      
-{/* 
+
       <section className="section section7">
         <h4 className="section-subheading">Testimonials</h4>
         <h1 className="section-heading">
@@ -351,7 +360,7 @@ export default function Home() {
           <Testimonial></Testimonial>
           <Testimonial></Testimonial>
         </div>
-      </section> */}
+      </section>
       
     </div>
   );

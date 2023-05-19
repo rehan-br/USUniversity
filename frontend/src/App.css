@@ -74,3 +74,45 @@
   width: 826px;
   height: 99vh;
 }
+@media screen and (max-width: 375px) {
+  
+  .loginScreen {
+    flex-direction: column-reverse;
+    background-image: url('..//src/assets/Login/loginimg.png');
+    
+  }
+  
+  .loginScreenContent {
+    order: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  
+  .loginScreenImage img {
+    display: none;
+  }
+  
+  .loginScreenContent h1 {
+    font-size: 32px;
+    line-height: 42px;
+    
+  }
+  
+  .loginScreenContent h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .loginScreenContent input {
+    width: 300px;
+  }
+  .loginScreenContent{
+    
+    /* position: absolute; */
+  }
+  
+  .loginButton {
+    width: 300px;
+  }
+}
