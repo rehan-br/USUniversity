@@ -36,20 +36,23 @@ exports.login = async (req, res) => {
     console.log("Body: " + email + " " + password);
 
         try {
-            PersonalData.findOne({ email: email }, function (err, user) {
+            PersonalData.findOne({ email: email })
+            .then((user, err) =>{
                 if (err) {
                     console.log(err);
-                    res.status(500).json({ success: false, error: error.message });
-                } else {
-                    if (user) {
-                        if (user.password === password) {
-                            const token = jwt.sign({ email: user.email, isAdmin: user.isAdmin }, process.env.SECRET, { expiresIn: '99h' });
-                            res.status(200).json({ success: true, token: token, isAdmin: user.isAdmin });
-                        } else {
-                            res.status(401).json({ success: false, error: "Wrong Password!" });
-                        }
-                    } else {
-                        res.status(404).json({ success: false, error: "User not found!" });
+                    res.status(500).json({ success: false, error: err.message });
+                }
+                else if (!user) {
+                    res.status(404).json({ success: false, error: "User not found" });
+                }
+                else {
+                    if (user.password === password) {
+                        console.log("User found!");
+                        const token = jwt.sign({ id: user._id }, process.env.SECRET);
+                        res.status(200).json({ success: true, data: user, token : token });
+                    }
+                    else {
+                        res.status(404).json({ success: false, error: "Wrong password" });
                     }
                 }
             });
@@ -81,7 +84,7 @@ exports.getAll = async (req, res) => {
 // READ
 exports.getPersonalDataById = async (req, res) => {
   try {
-    const personalData = await PersonalData.findById(req.params.id);
+    const personalData = await PersonalData.findOne({userId : req.params.id});
     if (!personalData) {
       return res.status(404).json({ error: 'Personal data not found' });
     }

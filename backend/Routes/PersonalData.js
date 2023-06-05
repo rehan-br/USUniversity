@@ -9,6 +9,7 @@ router.post('/create', PersonalController.createPersonalData);
 router.post('/update/:id', PersonalController.updatePersonalData);
 router.delete('/delete/:id', PersonalController.deletePersonalData);
 router.get('/getAll', PersonalController.getAll);
+router.get('/getById/:id', PersonalController.getPersonalDataById)
 
 
 module.exports = router;
