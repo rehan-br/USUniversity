@@ -10,24 +10,25 @@ env.config();
 const uri = process.env.ATLAS_URI;
 const port = process.env.PORT || 3001;
 
-mongoose.connect(uri, {useNewUrlParser:true});
+mongoose.connect(uri, { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
-    console.log("Connected to DB!");
-})
+  console.log('Connected to DB!');
+});
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 const studentRouter = require('./Routes/StudentRoute');
+const adminRouter = require('./Routes/AdminRoutes.js');
 const userRouter = require('./Routes/PersonalData');
 
 app.use('/student', studentRouter);
 app.use('/user', userRouter);
+app.use('/admin', adminRouter);
 
 app.listen(port, () => {
-    console.log('Listening on port ' + port);
-    }
-);
+  console.log('Listening on port ' + port);
+});
