@@ -4,7 +4,6 @@ const FormsScheduleSchoolSchema = new mongoose.Schema({
     userId: {
         type: String,
         required: true,
-        unique: true
     },
     name: {
         type: String,
@@ -13,7 +12,7 @@ const FormsScheduleSchoolSchema = new mongoose.Schema({
     email: {
         type: String,
         required:true,
-        unique: true
+        
     },
     dob : {
         type: Date,

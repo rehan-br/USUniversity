@@ -15,26 +15,31 @@ export default function Rf1({ handleFormData }) {
   const [name, setname] = useState('');
   const [email, setemail] = useState('');
   const [dob, setdob] = useState('');
-  const [Nationality, setnationality] = useState('');
+  const [nationality, setnationality] = useState('');
   const [gender, setgender] = useState('');
-  const [desiredschool, setdesiredschool] = useState('');
-  const [englishskill, setenglishskill] = useState('');
-  const [consultationpackage, setconsultationpackage] = useState('');
+  const [school, setschool] = useState('');
+  const [englishSkill, setenglishskill] = useState('');
+  const [consultationPackage, setconsultationpackage] = useState('');
   const [selected, setSelected] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    //Sending data with axios
+    
 
 
-    axios.post('http://localhost:3001/student/createStudent', 
+    axios.post('http://localhost:3001/school/createschool', 
       {
         name: name,
         email: email,
         dob: dob,
-        nationality: Nationality,
-        gender: selected
+        nationality: nationality,
+        gender: gender,
+        school: school,
+        englishSkill: englishSkill,
+        consultationPackage: consultationPackage,
+        
+
       }
     ).then((res) => {
       console.log(res);
@@ -45,7 +50,7 @@ export default function Rf1({ handleFormData }) {
   };
 
   function handleCheckboxChange(event) {
-    setSelected(event.target.value);
+    setgender(event.target.value);
   }
   const [selectedImages, setSelectedImages] = useState([]);
 
@@ -109,7 +114,7 @@ export default function Rf1({ handleFormData }) {
               <input
                 className="i"
                 disabled={isEditable ? false : true}
-                type="email"
+                type="text"
                 onChange={(event) => {
                   setemail(event.target.value);
                 }}
@@ -134,16 +139,16 @@ export default function Rf1({ handleFormData }) {
             </div>
             <div className="emailinput">
               <p>
-                Nationality<span className="imp">*</span>
+                nationality<span className="imp">*</span>
               </p>
               <select
-                className="nation"
+                className="nation" type="text"
                 disabled={isEditable ? false : true}
                 onChange={(event) => {
                   setnationality(event.target.value);
                 }}
               >
-                <option value="">Select Nationality</option>
+                <option value="">Select nationality</option>
                 <option value="usa">USA</option>
                 <option value="canada">Canada</option>
                 <option value="uk">UK</option>
@@ -160,7 +165,7 @@ export default function Rf1({ handleFormData }) {
                 disabled={isEditable ? false : true}
                 type="checkbox"
                 value="male"
-                checked={selected === 'male'}
+                checked={gender === 'male'}
                 onChange={handleCheckboxChange}
               />
               <p>Male</p>
@@ -170,7 +175,7 @@ export default function Rf1({ handleFormData }) {
                 disabled={isEditable ? false : true}
                 type="checkbox"
                 value="female"
-                checked={selected === 'female'}
+                checked={gender === 'female'}
                 onChange={handleCheckboxChange}
               />
               <p> Female </p>
@@ -230,6 +235,9 @@ export default function Rf1({ handleFormData }) {
               disabled={isEditable ? false : true}
               type="text"
               placeholder="Type a tag and press Enter"
+              onChange={(event) => {
+                setschool(event.target.value);
+              }}
             />
           </div>
           <div>
@@ -240,6 +248,7 @@ export default function Rf1({ handleFormData }) {
               style={{ width: '300px' }}
               id="skill"
               name="skill"
+              type="text"
               onChange={(event) => {
                 setenglishskill(event.target.value);
               }}
@@ -253,6 +262,7 @@ export default function Rf1({ handleFormData }) {
           <div>
             <p>Ordered Consultation Package</p>
             <select
+            type="text"
               disabled={isEditable ? false : true}
               className="selectskill"
               style={{ width: '300px' }}
