@@ -79,7 +79,7 @@ export default function Navbars() {
               <Button className="applyOnline">Apply Online</Button>
             </Link>
             <Button className="login" onClick={handleLogin}>
-              <Link className="link" to="" style={{ textDecoration: 'none' }}>
+              <Link className="link" to="/home" style={{ textDecoration: 'none' }}>
                 Login
               </Link>
             </Button>

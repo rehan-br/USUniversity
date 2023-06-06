@@ -240,7 +240,7 @@ export default function MobileNav() {
           </div>
 
           <div className="mobile-navBtn applyOnlineContainer">
-            <Link className="btnLink">
+            <Link className="btnLink" to='/reg'>
               <button className="mobileBtn applyBtn">Apply Online</button>
             </Link>
           </div>

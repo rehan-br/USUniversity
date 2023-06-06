@@ -1,13 +1,19 @@
 const mongoose = require('mongoose');
 
 const FormsScheduleSchoolSchema = new mongoose.Schema({
+    userId: {
+        type: String,
+        required: true,
+        unique: true
+    },
     name: {
         type: String,
         required: true,
     },
     email: {
         type: String,
-        required:true
+        required:true,
+        unique: true
     },
     dob : {
         type: Date,
