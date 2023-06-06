@@ -10,6 +10,7 @@ import close from '../../assets/Login/Close.png';
 import email from '../../assets/Login/email.png';
 import pass from '../../assets/Login/pass.png';
 import user from '../../assets/Login/user.png';
+import navbarlogo from '../../assets/About/navbarlogo.png';
 export default function Navbars() {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
@@ -38,7 +39,7 @@ export default function Navbars() {
     <div>
       <Navbar>
         <Container className="nav-container">
-          <Navbar.Brand className="logo">Logo</Navbar.Brand>
+          <img className='navlogo' src={navbarlogo}></img>
           <Nav className="nav-links">
             <Nav.Link className="nav-link">
               <Link className="link" to="/home">
