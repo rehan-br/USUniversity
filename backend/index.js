@@ -24,6 +24,8 @@ app.use(express.urlencoded({ extended: true }));
 const studentRouter = require('./Routes/StudentRoute');
 const adminRouter = require('./Routes/AdminRoutes.js');
 const userRouter = require('./Routes/PersonalData');
+const fschoolRouter = require('./Routes/FSchoolRoute');
+const funiRouter = require('./Routes/FUniRoute');
 
 app.use('/student', studentRouter);
 app.use('/user', userRouter);
@@ -31,6 +33,8 @@ app.use('/user', userRouter);
 app.use('/payment', payment)
 
 app.use('/admin', adminRouter);
+app.use('/fschool', fschoolRouter);
+app.use('/funi', funiRouter);
 
 
 app.listen(port, () => {
