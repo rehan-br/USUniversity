@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const env = require('dotenv');
 const app = express();
-
+const payment = require("./Routes/PaymentRoutes.js")
 env.config();
 
 const uri = process.env.ATLAS_URI;
@@ -27,7 +27,11 @@ const userRouter = require('./Routes/PersonalData');
 
 app.use('/student', studentRouter);
 app.use('/user', userRouter);
+
+app.use('/payment', payment)
+
 app.use('/admin', adminRouter);
+
 
 app.listen(port, () => {
   console.log('Listening on port ' + port);

@@ -33,9 +33,11 @@ import Notification from './DashboardPages/Notification/Notification';
 import User from './DashboardPages/User/User';
 import Inbox from './DashboardPages/Inbox/Inbox';
 import { useEffect, useState } from 'react';
+import PaymentForm from './pages/Profile/stripe';
 import Sidebar from './components/Sidebar/Sidebar';
 import loginScreenImage from './assets/loginScreenImage.png';
 import { Link, useNavigate } from 'react-router-dom';
+
 const torontoUniversity = {
   name: 'Toronto University',
   annualDromitory: '$30,000',
@@ -238,7 +240,7 @@ function App() {
               <Route path="/home" element={<Home />}></Route>
               <Route path="/blog" element={<Blog />}></Route>
               <Route path="/profile1" element={<Profile1 />}></Route>
-              <Route path="/profile" element={<Profile2 />}></Route>
+              <Route path="/profile2" element={<Profile2 />}></Route>
               <Route path="/reg" element={<Rf1 />}></Route>
               <Route path="/reg2" element={<Rf2 />}></Route>
               <Route path="/reg3" element={<Rf3 />}></Route>
@@ -246,6 +248,7 @@ function App() {
               <Route path="/blog" element={<Blog />}></Route>
               <Route path="/contact" element={<Contact />} />
               <Route path="/service" element={<Service />}></Route>
+              <Route path="/payment" element={<PaymentForm />}></Route>
               <Route
                 path="/service/details"
                 element={<ServiceDetail />}

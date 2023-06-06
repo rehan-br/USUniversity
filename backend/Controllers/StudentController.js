@@ -24,7 +24,7 @@ exports.loginStudentProfile = async (req, res) => {
             }
 
             const token = jwt.sign({id: student._id}, process.env.SECRET, {
-                expiresIn: process.env.JWT_EXPIRES_IN,
+                expiresIn: "10s",
             });
 
             res.status(200).json({

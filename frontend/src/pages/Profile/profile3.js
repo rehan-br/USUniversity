@@ -13,7 +13,7 @@ import upload from  '../../assets/Profile/upload.png';
 import notyet from '../../assets/Profile/notyet.png'
 import './profile.css'
 import React, { useState } from "react";
-export default function Profile2() {
+export default function Profile3() {
 
     const [selected, setSelected] = useState(null);
 

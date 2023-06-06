@@ -1,4 +1,5 @@
 const PersonalData = require('../Models/PersonalData.js');
+
 const jwt = require('jsonwebtoken');
 
 
@@ -31,28 +32,25 @@ exports.register = async (req, res) => {
 }
 
 exports.login = async (req, res) => {
-    const { email, password } = req.body;
+  const { email, password } = req.body;
 
-    console.log("Body: " + email + " " + password);
+  console.log("Body: " + email + " " + password);
 
         try {
-            PersonalData.findOne({ email: email })
-            .then((user, err) =>{
+            PersonalData.findOne({ email: email }, function (err, user) {
                 if (err) {
                     console.log(err);
-                    res.status(500).json({ success: false, error: err.message });
-                }
-                else if (!user) {
-                    res.status(404).json({ success: false, error: "User not found" });
-                }
-                else {
-                    if (user.password === password) {
-                        console.log("User found!");
-                        const token = jwt.sign({ id: user._id }, process.env.SECRET);
-                        res.status(200).json({ success: true, data: user, token : token });
-                    }
-                    else {
-                        res.status(404).json({ success: false, error: "Wrong password" });
+                    res.status(500).json({ success: false, error: error.message });
+                } else {
+                    if (user) {
+                        if (user.password === password) {
+                            const token = jwt.sign({ email: user.email, isAdmin: user.isAdmin }, process.env.SECRET, { expiresIn: '99h' });
+                            res.status(200).json({ success: true, token: token, isAdmin: user.isAdmin });
+                        } else {
+                            res.status(401).json({ success: false, error: "Wrong Password!" });
+                        }
+                    } else {
+                        res.status(404).json({ success: false, error: "User not found!" });
                     }
                 }
             });
@@ -84,7 +82,7 @@ exports.getAll = async (req, res) => {
 // READ
 exports.getPersonalDataById = async (req, res) => {
   try {
-    const personalData = await PersonalData.findOne({userId : req.params.id});
+    const personalData = await PersonalData.findById(req.params.id);
     if (!personalData) {
       return res.status(404).json({ error: 'Personal data not found' });
     }
