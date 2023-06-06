@@ -12,7 +12,7 @@ export default function Blog(){
                 <h1><span class='underlined'>Blogs</span></h1>
             </section>
             <section class='second-container'>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+             
             </section>
             <section class='third-container'>
                 <div class='card'>
@@ -158,23 +158,7 @@ export default function Blog(){
                         </div>
                     </div>
                 </div>
-                <div class='page-numbers'>
-                    <div class='page-number'>
-                        <p></p>
-                    </div>
-                    <div class='page-number'>
-                        <p>1</p>
-                    </div>
-                    <div class='page-number'>
-                        <p>2</p>
-                    </div>
-                    <div class='page-number'>
-                        <p>3</p>
-                    </div>
-                    <div class='page-number'>
-                        <p></p>
-                    </div>
-                </div>
+                
             </section>
         </div>
     )
