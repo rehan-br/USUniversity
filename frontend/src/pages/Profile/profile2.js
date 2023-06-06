@@ -11,21 +11,17 @@ import invoice from'../../assets/Profile/invoice.png';
 import info from '../../assets/Profile/info.png';
 import upload from  '../../assets/Profile/upload.png';
 import notyet from '../../assets/Profile/notyet.png'
+import { Link } from 'react-router-dom';
 import './profile.css'
 import React, { useState, useEffect } from "react";
 import axiox from 'axios';
 export default function Profile2() {
 
-  const [studentData, setStudentData] = useState([]);
+ 
     const [selected, setSelected] = useState(null);
 
 
-    useEffect(() => {
-      
-     axiox.get('http://localhost:3001/student/getStudent').then((response) => {
-            setStudentData(response.data.data.student);
-        })
-    }, []);
+    
 
     function handleCheckboxChange(event) {
       setSelected(event.target.value);
@@ -54,7 +50,7 @@ export default function Profile2() {
             <div className="pic-div">
                 <div className='profilepic'>
                   <img  src={profilephoto} alt=''></img>
-                  <h3>{studentData[1].student.name}</h3>
+                  <h3>Shahbaz Ahmed</h3>
                      <div className='namediv'>
                      
                       <p>ID: 12345678</p>
@@ -88,30 +84,33 @@ export default function Profile2() {
                         
                         </div>
                         <div className='school'>
-                        <button >School</button>
-                        <button >University</button>
+                        <div className="TB">
+                           <button>School</button>
+                           <Link className='link' to='/reg2'> <button>University</button></Link>
+                           <hr style={{ marginTop: '30px' }}></hr>
+                        </div>
                         </div>
                         
                         
                         <br></br>
                           <div className='inputsdata'>
                             <div className='inputone'>  
-                            <p>{studentData[1].name}</p>
+                            <p>Shahbaz Ahmed</p>
                              <input   disabled={isEditable ? false : true}   type="text" placeholder='Budi' />
                             </div>
                             <div className='inputone'>
-                            <p>{studentData[1].email}</p>
+                            <p>Email</p>
                              <input disabled={isEditable ? false : true} type="email" placeholder='budidoremi@gmail.com' />
                             </div>
                             
                           </div>
                           <div className='inputsdata'>
                             <div className='inputone'>
-                                 <p>{studentData[1].dob}</p>
+                                 <p>Date Of Birth</p>
                                  <input  disabled={isEditable ? false : true} type="date" placeholder='15-03-2000'></input>
                             </div>
                               <div className='inputone'>
-                                 <p>{studentData[1].nationality}</p>
+                                 <p>Nationality</p>
                                  <input disabled={isEditable ? false : true} type='text' placeholder='USA'/>
                               </div>
                              
@@ -184,7 +183,7 @@ export default function Profile2() {
                                     <img src={invoice} alt=""></img>
                                     </div>
                                     <div className='rightinvoice ' style={{marginTop:"28px"}}>
-                                    <h2> Your Order For Counsseling A <br></br> With a Bill of <span className='applytext ' style={{textDecoration:"none"}}>2000$</span></h2>
+                                    <h2> Your Order For Counsseling A <br></br> With a Bill of <span className='applytext ' style={{textDecoration:"none"}}><Link to="/payment">2000$</Link></span></h2>
                                     <p>Please Make Payment To  </p>
                                     <h3>123456 123 (Bank Of America) </h3>
                                      </div>

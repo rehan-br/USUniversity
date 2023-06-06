@@ -70,6 +70,11 @@ export default function Navbars() {
                 Contact Us
               </Link>
             </Nav.Link>
+            <Nav.Link className="nav-link">
+              <Link className="link" to="/profile1">
+                Book
+              </Link>
+            </Nav.Link>
             <Link className="link" to="/reg">
               <Button className="applyOnline">Apply Online</Button>
             </Link>
