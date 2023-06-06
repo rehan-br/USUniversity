@@ -78,3 +78,62 @@ exports.deleteScheduleSchool = async (req, res) =>{
         res.status(500).json({error : error.message});
     }
 }
+
+exports.updateScheduleSchool = async (req, res) => {
+
+    const id = req.params;
+
+    try{
+
+        const FSchool = await FSchoolModel.findByIdAndUpdate({userId : id}, req.body, {new : true});
+
+        if (FSchool){
+            console.log("Form School Schedule Updated");
+            res.status(200).json({message: "Form Updated"});
+        }
+        else{
+            res.status(404).json({message: "Form School Schedule Not Found"});
+        }
+    }
+    catch(err){
+        res.status(500).json({error : error.message});
+    }
+}
+
+exports.getScheduleSchool = async (req, res) => {
+
+    const id = req.params;
+
+    try{
+        const FSchool = await FSchoolModel.findById({userId : id});
+
+        if (FSchool){
+            console.log("Form School Schedule Found");
+            res.status(200).json({data: FSchool});
+        }
+        else{
+            res.status(404).json({message: "Form School Schedule Not Found"});
+        }
+    }
+    catch(err){
+        res.status(500).json({error : error.message});
+    }
+}
+
+exports.getAllScheduleSchool = async (req, res) => {
+    
+        try{
+            const FSchool = await FSchoolModel.find();
+    
+            if (FSchool){
+                console.log("Form School Schedule Found");
+                res.status(200).json({data: FSchool});
+            }
+            else{
+                res.status(404).json({message: "Form School Schedule Not Found"});
+            }
+        }
+        catch(err){
+            res.status(500).json({error : error.message});
+        }
+    }
