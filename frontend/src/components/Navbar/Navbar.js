@@ -10,10 +10,75 @@ import close from '../../assets/Login/Close.png';
 import email from '../../assets/Login/email.png';
 import pass from '../../assets/Login/pass.png';
 import user from '../../assets/Login/user.png';
-import navbarlogo from '../../assets/About/navbarlogo.png';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export default function Navbars() {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [emailS, setEmailS] = useState('');
+  const [phone, setPhone] = useState('0321-1234567');
+  const [passwordS, setPasswordS] = useState('');
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:3001/user/register', {
+        firstName,
+        lastName,
+        email: emailS,
+        phone,
+        password: passwordS,
+        isAdmin,
+      });
+
+      const { success, data, error } = response.data;
+
+      if (success) {
+        console.log('User Created!');
+        console.log('User data:', data);
+        setShowSignup(false);
+        setShowLogin(true);
+        // Do something with the data (e.g., display a success message)
+      } else {
+        console.log('Error:', error);
+        // Handle the error (e.g., display an error message)
+      }
+    } catch (error) {
+      console.log('Error:', error);
+    }
+  };
+
+  const submitLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:3001/user/login', {
+        email,
+        password,
+      });
+      const { success, data, token, error } = response.data;
+
+      if (success) {
+        console.log('User found!');
+        console.log('User data:', data);
+        console.log('Token:', token);
+        setShowLogin(false);
+        // Do something with the data and token (e.g., store them in local storage, update state)
+      } else {
+        console.log('Error:', error);
+      }
+    } catch (error) {
+      console.log('Error:', error);
+    }
+  };
 
   const handleLogin = () => {
     setShowLogin(!showLogin);
@@ -39,7 +104,7 @@ export default function Navbars() {
     <div>
       <Navbar>
         <Container className="nav-container">
-          <img className='navlogo' src={navbarlogo}></img>
+          <Navbar.Brand className="logo">Logo</Navbar.Brand>
           <Nav className="nav-links">
             <Nav.Link className="nav-link">
               <Link className="link" to="/home">
@@ -71,16 +136,15 @@ export default function Navbars() {
                 Contact Us
               </Link>
             </Nav.Link>
-            <Nav.Link className="nav-link">
-              <Link className="link" to="/profile1">
-                Book
-              </Link>
-            </Nav.Link>
             <Link className="link" to="/reg">
               <Button className="applyOnline">Apply Online</Button>
             </Link>
             <Button className="login" onClick={handleLogin}>
-              <Link className="link" to="/home" style={{ textDecoration: 'none' }}>
+              <Link
+                className="link"
+                to="/home"
+                style={{ textDecoration: 'none' }}
+              >
                 Login
               </Link>
             </Button>
@@ -110,14 +174,18 @@ export default function Navbars() {
                   className="inpemail"
                   type="text"
                   placeholder="Email Address"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                   className="inpemail"
                   type="password"
                   placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <p className="fp">Forgot Password?</p>
-                <button className="lobtn">Login</button>
+                <button className="lobtn" onSubmit={submitLogin}>
+                  Login
+                </button>
                 <p className="">
                   Don't have an account yet?{' '}
                   <span className="scolor" onClick={handleSignup}>
@@ -151,24 +219,30 @@ export default function Navbars() {
                   className="inpemailsign"
                   type="text"
                   placeholder="First Name"
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
                 <input
                   className="inpemailsign"
                   type="text"
                   placeholder="Last Name"
+                  onChange={(e) => setLastName(e.target.value)}
                 />
                 <input
                   className="inpemailsign"
                   type="text"
                   placeholder="Email Address"
+                  onChange={(e) => setEmailS(e.target.value)}
                 />
                 <input
                   className="inpemailsign"
                   type="password"
                   placeholder="Password"
+                  onChange={(e) => setPasswordS(e.target.value)}
                 />
 
-                <button className="signbtn">Create Account</button>
+                <button className="signbtn" onClick={handleRegister}>
+                  Create Account
+                </button>
                 <p className="lline">
                   Already have an account?{' '}
                   <span className="scolor" onClick={handleLogin}>
