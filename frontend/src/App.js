@@ -5,6 +5,7 @@ import Home from './pages/Home/Home.js';
 import Blog from './pages/Blog/Blog.js';
 import Profile1 from './pages/Profile/profile1.js';
 import Profile2 from './pages/Profile/profile2.js';
+import Profile3 from './pages/Profile/profile3.js';
 import Rf1 from './pages/RegisterationForm/Rf1.js';
 import Contact from './pages/Contact/contact';
 import Footer from './components/Footer/Footer.js';
@@ -249,6 +250,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/service" element={<Service />}></Route>
               <Route path="/payment" element={<PaymentForm />}></Route>
+              <Route path="/profile3" element={<Profile3 />}></Route>
               <Route
                 path="/service/details"
                 element={<ServiceDetail />}

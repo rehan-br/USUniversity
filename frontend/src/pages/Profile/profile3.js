@@ -167,7 +167,9 @@ export default function Profile3() {
 
                     <div className='password data2'>
                         <div className='inputs-right' style={{marginLeft:"20px"}}>
-                             <p>Information</p>
+                             <p>Information
+                
+                             </p>
                              <div className='payment'>
                                 <div style={{display:"flex"}}>
                                     <div className='invoicepic' style={{margin:"20px"}}>
@@ -175,41 +177,19 @@ export default function Profile3() {
                                     </div>
                                     <div className='rightinvoice ' style={{marginTop:"28px"}}>
                                     <h2> Your Order For Counsseling A <br></br> With a Bill of <span className='applytext ' style={{textDecoration:"none"}}>2000$</span></h2>
-                                    <p>Please Make Payment To  </p>
-                                    <h3>123456 123 (Bank Of America) </h3>
+                                    <p>Payment Successfull </p>
+                                   
                                      </div>
                                 </div>
-                                 
-                                     <div className='info'>
-                                       <img src={info} alt=""></img>
-                                       <p>Please make a payment before the specified time ends or the order will be automatically canceled. <strong style={{color:"#FF6666"}}>23:50:30</strong></p>
-                                      </div>
                                       
                                </div>
                         </div>
-                        <div className='upload'>
-                         <img src={upload} alt='upload'></img>
-                         <p>Upload Proof of your Payment, <b>Drag and Drop your file or <span className='applytext'>browse </span> </b></p>
-                        </div>
-                                       <div className='cancel'>
-                                           <button>
-                                           Cancel Order
-                                           </button>
-                                       </div>
+                        
+                                       
                                         
                         
                     </div>
-                    <div className='password data2 counsel'>
-                        <div style={{margin:"20px"}}>
-                            <h2>Your Counseling Schedule</h2>
-                             <p>Information</p>
-                                 <div className='payment schedule' >
-                                        <img src={notyet} alt='notyet'></img>
-                                        <p>You haven't Registered Your Counseling Schedule Yet, <span className='applytext'>Apply Now!</span></p>
-                                 </div>
-                         </div>
                     
-                    </div>
                      
                 </div>
             </div>

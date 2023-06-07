@@ -46,6 +46,7 @@ export default function Rf1({ handleFormData }) {
     })
     .catch((err) => {
       console.log(err);
+
     });
   };
 
@@ -285,7 +286,8 @@ export default function Rf1({ handleFormData }) {
           </div>
 
           <div className="savebt">
-          <button onClick={handleSubmit}>Save & Next</button>
+           <Link to="payment"><button onClick={handleSubmit}>Save </button></Link>
+          
           </div>
         </div>
       </form>

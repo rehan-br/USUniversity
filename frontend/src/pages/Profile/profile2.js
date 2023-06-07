@@ -196,29 +196,12 @@ export default function Profile2() {
                                       
                                </div>
                         </div>
-                        <div className='upload'>
-                         <img src={upload} alt='upload'></img>
-                         <p>Upload Proof of your Payment, <b>Drag and Drop your file or <span className='applytext'>browse </span> </b></p>
-                        </div>
-                                       <div className='cancel'>
-                                           <button>
-                                           Cancel Order
-                                           </button>
-                                       </div>
+                       
+                                      
                                         
                         
                     </div>
-                    <div className='password data2 counsel'>
-                        <div style={{margin:"20px"}}>
-                            <h2>Your Counseling Schedule</h2>
-                             <p>Information</p>
-                                 <div className='payment schedule' >
-                                        <img src={notyet} alt='notyet'></img>
-                                        <p>You haven't Registered Your Counseling Schedule Yet, <span className='applytext'>Apply Now!</span></p>
-                                 </div>
-                         </div>
-                    
-                    </div>
+                   
                      
                 </div>
             </div>

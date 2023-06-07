@@ -3,76 +3,31 @@ const PersonalData = require('../Models/PersonalData.js');
 
 
 exports.createScheduleUni = async (req, res) => {
+   const {name,email,dob,nationality,lastEducation,studyField,englishSkill,gender,
+    university,major,degree,consultationPackage} = req.body;
+    console.log(name,email,dob,nationality,lastEducation,studyField,englishSkill,gender,
+        university,consultationPackage)
+      console.log("Major and degree",major,degree)
 
-    const name = req.body.name;
-    const email = req.body.email;
-    const dob = req.body.dob;
-    const nationality = req.body.nationality;
-    const lastEducation = req.body.lastEducation;
-    const yearOfGraduation = req.body.yearOfGraduation;
-    const studyField = req.body.studyField;
-    const englishSkill = req.body.englishSkill;
-    const gender = req.body.gender;
-    const university = req.body.university;
-    const major = req.body.major;
-    const degree = req.body.degree;
-    const consultationPackage = req.body.consultationPackage;
+    const allData = await FUniModel.find();
 
-
-    try{
-        const personalData = await PersonalData.findOne({email : email});
-        const allData = await PersonalData.find();
-
-        if(personalData){
-            const id = personalData.userId;
+   const id = allData.length + 1;
+       
+        const FUdata = await FUniModel.create({
+            userId: id,
             
-            const FUni = await FUniModel.create({
-                id,
-                name,
-                email,
-                dob,
-                nationality,
-                lastEducation,
-                yearOfGraduation,
-                studyField,
-                englishSkill,
-                gender,
-                university,
-                major,
-                degree,
-                consultationPackage
-            })
+            name,email,dob,nationality,lastEducation,studyField,englishSkill,gender,
+    university,major,degree,consultationPackage
+        });
 
-            console.log("Form Schedule: Uni Created (Pre-existing User");
-            res.status(201).json({success: true, data: FUni, message: "Schedule Uni Form Created"});
+        
+       
+        if (FUdata) {
+            console.log("User Created!");
+            res.status(200).json({ success: true, data: FUdata });
+        } else {
+            res.status(404).json({ success: false, error: "User not found!" });
         }
-        else{
-            const id = allData.length + 1;
-
-            const FUni = await FUniModel.create({
-                id,
-                name,
-                email,
-                dob,
-                nationality,
-                lastEducation,
-                yearOfGraduation,
-                studyField,
-                englishSkill,
-                gender,
-                university,
-                major,
-                degree,
-                consultationPackage
-            })
-
-            console.log("Form Schedule: Uni Created");
-            res.status(201).json({success: true, data: FUni, message: "Schedule Uni Form Created"});
-        }
-    }
-    catch(err){
-        res.status(500).json({message : err.message});
-    }
 }
 
 exports.deleteScheduleUni = async (req, res) =>{
