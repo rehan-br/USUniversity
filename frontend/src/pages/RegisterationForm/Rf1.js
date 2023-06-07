@@ -26,7 +26,10 @@ export default function Rf1({ handleFormData }) {
     e.preventDefault();
 
     
-
+    if (!name || !email || !dob || !nationality || !gender || !school || !englishSkill || !consultationPackage) {
+      alert('Please fill in all required fields');
+      return;
+    }
 
     axios.post('http://localhost:3001/school/createschool', 
       {
