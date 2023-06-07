@@ -38,7 +38,7 @@ import PaymentForm from './pages/Profile/stripe';
 import Sidebar from './components/Sidebar/Sidebar';
 import loginScreenImage from './assets/loginScreenImage.png';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Thankyou from './pages/Thankyou/thankyou.js'
 const torontoUniversity = {
   name: 'Toronto University',
   annualDromitory: '$30,000',
@@ -250,7 +250,6 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/service" element={<Service />}></Route>
               <Route path="/payment" element={<PaymentForm />}></Route>
-              <Route path="/profile3" element={<Profile3 />}></Route>
               <Route
                 path="/service/details"
                 element={<ServiceDetail />}
