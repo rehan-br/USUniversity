@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const FormsScheduleUniSchema = new mongoose.Schema(
     {
+        userId: {
+            type: String,
+            required: true,
+        },
         name: {
             type: String,
             required: true,
@@ -22,10 +26,7 @@ const FormsScheduleUniSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        yearOfGraduation : {
-            type: String,
-            required: true,
-        },
+       
         studyField : {
             type: String,
             required: true,

@@ -10,7 +10,7 @@ import pic3 from '../../assets/Registrationform/pic3.png'
 import { useState } from "react";
 import './rf.css';
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 
 
 export default function Rf2() {
@@ -18,23 +18,54 @@ export default function Rf2() {
   const [name, setname] = useState("")
   const [email, setemail] = useState("")
   const [dob, setdob] = useState("")
-  const [Nationality , setnationality] = useState("")
-  const [lasteducation , setlasteducation] = useState("")
-  const [yearofgraduation , setyearofgraduation] = useState("")
-  const [fieldofstudy , setfieldofstudy] = useState("")
-  const [englishskill, setenglishskill] = useState("")
+  const [nationality , setnationality] = useState("")
+  const [lastEducation , setlasteducation] = useState("")
+  
+  const [studyField , setfieldofstudy] = useState("")
+  const [englishSkill, setenglishskill] = useState("")
   const [gender,setgender]= useState("")
-  const [desireduniversity , setuniversity] =useState("")
-  const [desiredmajor , setmajor] = useState("")
-  const [desireddegree , setdegree] = useState("")
+  const [university , setuniversity] =useState("")
+  const [major , setmajor] = useState("option1")
+  const [degree , setdegree] = useState("option2")
 
-  const [consultationpackage , setconsultationpackage ] = useState("")
+  const [consultationPackage , setconsultationpackage ] = useState("")
+    const handleSubmit = (e) => {
+    e.preventDefault();
 
+    
+
+
+    axios.post('http://localhost:3001/funi/create', 
+      {
+        name: name,
+        email: email,
+        dob: dob,
+        nationality: nationality,
+        lastEducation: lastEducation,
+       
+        studyField: studyField,
+        englishSkill: englishSkill,
+        gender: gender,
+        university: university,
+        major: major,
+        degree: degree,
+        consultationPackage: consultationPackage,
+        
+
+      }
+    ).then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+      
+    });
+  };
 
     const [selected, setSelected] = useState(null);
 
     function handleCheckboxChange(event) {
-      setSelected(event.target.value);
+      setgender(event.target.value);
     }
     const [selectedImages, setSelectedImages] = useState([]);
 
@@ -118,17 +149,7 @@ export default function Rf2() {
                     <option value="option5">option5</option>
                 </select>
                 </div>
-                <div className="emailinput">
-                <p>Year of Graduation<span className='imp'>*</span></p>
-                <select className="nation" disabled={isEditable ? false : true} onChange = {(event) => {setyearofgraduation(event.target.value)}} >
-                    <option value="">Select Year of Graduation</option>
-                    <option value="option1">option1</option>
-                    <option value="option2">option2</option>
-                    <option value="option3">option3</option>
-                    <option value="option4">option4</option>
-                    <option value="option5">option5</option>
-                </select>
-                </div>
+                
                       
             </div>
 
@@ -163,11 +184,11 @@ export default function Rf2() {
                              <div className='gender'> 
                              
                                     <div style={{display:"flex",gap:"10px"}}>
-                                      <input disabled={isEditable ? false : true} type="checkbox" value="option1" checked={selected === "option1"} onChange={handleCheckboxChange} /> 
+                                      <input disabled={isEditable ? false : true} type="checkbox" value="option1" checked={gender === "option1"} onChange={handleCheckboxChange} /> 
                                       <p>Male</p>  
                                     </div>  
                                       <div style={{display:"flex" ,gap:"10px"}}>
-                                      <input disabled={isEditable ? false : true} type="checkbox" value="option2" checked={selected === "option2"}  onChange={handleCheckboxChange} />
+                                      <input disabled={isEditable ? false : true} type="checkbox" value="option2" checked={gender === "option2"}  onChange={handleCheckboxChange} />
                                       <p> Female </p>
                                       </div>
                                        
@@ -189,7 +210,7 @@ export default function Rf2() {
                                  </div>
                                  <div  >
                                      <p for="skill">Your Desired Major</p>
-                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="skill" name="skill" onChange = {(event) => {setmajor(event.target.value)}}>
+                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="skill" name="skill" >
                                      <option value=""></option>
                                      <option value="">option1</option>
                                      <option value="">option2</option>
@@ -198,7 +219,7 @@ export default function Rf2() {
                                  </div>
                                  <div  >
                                      <p for="skill">Desired Degree</p>
-                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="skill" name="skill" onChange = {(event) => {setdegree(event.target.value)}}>
+                                     <select  disabled={isEditable ? false : true} className='selectskill' style={{width:"300px"}} id="skill" name="skill" >
                                      <option value=""></option>
                                      <option value="">option1</option>
                                      <option value="">option2</option>
@@ -219,8 +240,8 @@ export default function Rf2() {
                                  </div>
 
                                   <div className="savebt">
-                                   
-                                  <button>Save & Next</button>
+                                   <Link to="/payment"><button onClick={handleSubmit}>Save & Next</button></Link>
+                                  
                                   </div>
                                   
 

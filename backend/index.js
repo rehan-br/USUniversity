@@ -5,6 +5,8 @@ const cors = require('cors');
 const env = require('dotenv');
 const app = express();
 const payment = require("./Routes/PaymentRoutes.js")
+const schoolRoutes = require('./Routes/SchoolRoutes.js');
+const funiRouter = require('./Routes/FUniRoute.js');
 env.config();
 
 const uri = process.env.ATLAS_URI;
@@ -24,8 +26,6 @@ app.use(express.urlencoded({ extended: true }));
 const studentRouter = require('./Routes/StudentRoute');
 const adminRouter = require('./Routes/AdminRoutes.js');
 const userRouter = require('./Routes/PersonalData');
-const fschoolRouter = require('./Routes/FSchoolRoute');
-const funiRouter = require('./Routes/FUniRoute');
 
 app.use('/student', studentRouter);
 app.use('/user', userRouter);
@@ -33,7 +33,7 @@ app.use('/user', userRouter);
 app.use('/payment', payment)
 
 app.use('/admin', adminRouter);
-app.use('/fschool', fschoolRouter);
+app.use('/school', schoolRoutes);
 app.use('/funi', funiRouter);
 
 

@@ -5,6 +5,7 @@ import Home from './pages/Home/Home.js';
 import Blog from './pages/Blog/Blog.js';
 import Profile1 from './pages/Profile/profile1.js';
 import Profile2 from './pages/Profile/profile2.js';
+import Profile3 from './pages/Profile/profile3.js';
 import Rf1 from './pages/RegisterationForm/Rf1.js';
 import Contact from './pages/Contact/contact';
 import Footer from './components/Footer/Footer.js';
@@ -37,7 +38,7 @@ import PaymentForm from './pages/Profile/stripe';
 import Sidebar from './components/Sidebar/Sidebar';
 import loginScreenImage from './assets/loginScreenImage.png';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Thankyou from './pages/Thankyou/thankyou.js'
 const torontoUniversity = {
   name: 'Toronto University',
   annualDromitory: '$30,000',

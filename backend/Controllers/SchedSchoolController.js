@@ -1,62 +1,31 @@
 const FSchoolModel = require('../Models/FormsScheduleSchool.js');
 const PersonalData = require('../Models/PersonalData.js');
 
-
 exports.createScheduleSchool = async (req, res) => {
+    console.log("Saving..");
+   const {name,email,dob,nationality,gender,school,englishSkill,consultationPackage} = req.body;
+   console.log(name,email,dob,nationality,gender,school,englishSkill,consultationPackage)
 
-    const name = req.body.name;
-    const email = req.body.email;
-    const dob = req.body.dob;
-    const nationality = req.body.nationality;
-    const gender = req.body.gender;
-    const school = req.body.school;
-    const englishSkill = req.body.englishSkill;
-    const consultationPackage = req.body.consultationPackage;
 
-    try{
-        const personalData = await PersonalData.findOne({email : email});
-        const allData = await PersonalData.find();
+   const allData = await FSchoolModel.find();
 
-        if(personalData){
-            const id = personalData.userId;
-            
-            const FSchool = await FSchoolModel.create({
-                id,
-                name,
-                email,
-                dob,
-                nationality,
-                gender,
-                school,
-                englishSkill,
-                consultationPackage
-            })
+   const id = allData.length + 1;
+       
+        const Fdata = await FSchoolModel.create({
+            userId: id,
+            name,email,dob,nationality,gender,school,englishSkill,consultationPackage
+        });
 
-            console.log("Form Schedule: School Created (Pre-existing User");
-            res.status(201).json({success: true, data: FSchool, message: "Schedule School Form Created"});
+        
+       
+        if (Fdata) {
+            console.log("User Created!");
+            res.status(200).json({ success: true, data: Fdata });
+        } else {
+            res.status(404).json({ success: false, error: "User not found!" });
         }
-        else{
-            const id = allData.length + 1;
-
-            const FSchool = await FSchoolModel.create({
-                id,
-                name,
-                email,
-                dob,
-                nationality,
-                gender,
-                school,
-                englishSkill,
-                consultationPackage
-            })
-
-            console.log("Form Schedule: School Created");
-            res.status(201).json({success: true, data: FSchool, message: "Schedule School Form Created"});
-        }
-    }
-    catch(err){
-        res.status(500).json({message : err.message});
-    }
+        
+    
 }
 
 exports.deleteScheduleSchool = async (req, res) =>{

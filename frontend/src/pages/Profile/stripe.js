@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const PaymentForm = () => {
   const [amount, setAmount] = useState(0);
@@ -11,28 +12,27 @@ const PaymentForm = () => {
     event.preventDefault();
   
     try {
-      // Create a payment object with the required data
+      
       const paymentData = {
         amount,
         currency,
         description
       };
   
-      // Send a POST request to the backend to process the payment
+    
       const response = await axios.post('http://localhost:3001/payment/process', paymentData);
   
-      // Handle the success response
+     
       console.log(response.data);
-      // Display a success message
+     
       window.alert('Payment processed successfully');
   
-      // You can also redirect the user to a success page if needed
-      // history.push('/success');
+      
   
     } catch (error) {
-      // Handle any errors that occur during the payment process
+    
       console.error(error);
-      // Display an error message
+      
       window.alert('Payment failed. Please try again.');
     }
   };
@@ -70,8 +70,8 @@ const PaymentForm = () => {
           onChange={(event) => setDescription(event.target.value)}
         />
       </div>
-     
-      <button type="submit">Submit Payment</button>
+     <Link to="/profile3"><button type="submit">Submit Payment</button></Link>
+      
     </form>
   );
 };
